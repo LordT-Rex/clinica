@@ -79,10 +79,6 @@ class BloqueNoDisponibleController extends Controller {
                 $modeloBloqueado->save();
             }
             $this->redirect(array('admin'));
-            //$modelBloque = Bloque::model()->findByAttributes(array('id_dia'=>$id_dia , 'inicio'=>$model->inicio));
-            //$model->id_bloque = $modelBloque->id_bloque;
-            //if ($model->save())
-                //$this->redirect(array('admin'));
         }
         $this->render('create', array(
                 'model' => $model,
