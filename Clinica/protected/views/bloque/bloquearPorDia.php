@@ -1,6 +1,9 @@
 <?php
 /* @var $this DiaController */
 /* @var $dataProvider CActiveDataProvider */
+$this->breadcrumbs=array(
+	'Bloques',
+);
 
 $this->menu=array(
 	array('label'=>'Inhabilitar Bloque en específico', 'url'=>array('bloqueNoDisponible/create')),

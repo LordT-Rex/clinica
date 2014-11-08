@@ -33,7 +33,7 @@ $('.search-form form').submit(function(){
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php $this->widget('bootstrap.widgets.TbGridView', array(
 	'id'=>'cita-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,

@@ -58,7 +58,7 @@
      </div> 
 	
 	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
+		<?php $this->widget('bootstrap.widgets.TbBreadcrumb', array(
 			'links'=>$this->breadcrumbs,
 		)); ?><!-- breadcrumbs -->
 	<?php endif?>
