@@ -8,11 +8,9 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Tratamiento', 'url'=>array('index')),
-	array('label'=>'Create Tratamiento', 'url'=>array('create')),
-	array('label'=>'Update Tratamiento', 'url'=>array('update', 'id'=>$model->id_tratamiento)),
-	array('label'=>'Delete Tratamiento', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_tratamiento),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Tratamiento', 'url'=>array('admin')),
+	array('label'=>'Volver', 'url'=>array('index')),
+	
+	array('label'=>'Manejar Tratamiento', 'url'=>array('admin')),
 );
 ?>
 

@@ -9,13 +9,13 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Tratamiento', 'url'=>array('index')),
-	array('label'=>'Create Tratamiento', 'url'=>array('create')),
-	array('label'=>'View Tratamiento', 'url'=>array('view', 'id'=>$model->id_tratamiento)),
-	array('label'=>'Manage Tratamiento', 'url'=>array('admin')),
+	array('label'=>'Listar Tratamiento', 'url'=>array('index')),
+	array('label'=>'Crear Tratamiento', 'url'=>array('create')),
+
+	
 );
 ?>
 
-<h1>Update Tratamiento <?php echo $model->id_tratamiento; ?></h1>
+<h3 align="center">Modificar Tratamiento <?php echo $model->id_tratamiento; ?></h3>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

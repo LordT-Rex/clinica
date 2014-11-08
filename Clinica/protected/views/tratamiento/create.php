@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create Tratamiento</h1>
+<h3 align="center">Crear Tratamiento</h3>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

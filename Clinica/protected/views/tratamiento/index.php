@@ -11,8 +11,7 @@ $this->menu=array(
 	array('label'=>'Administrar Tratamiento', 'url'=>array('admin')),
 );
 ?>
-
-<h1>Tratamientos</h1>
+<h3 align="center">Tratamientos</h3>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
