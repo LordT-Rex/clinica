@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Tratamiento', 'url'=>array('create')),
-	array('label'=>'Manage Tratamiento', 'url'=>array('admin')),
+	array('label'=>'Crear Tratamiento', 'url'=>array('create')),
+	array('label'=>'Administrar Tratamiento', 'url'=>array('admin')),
 );
 ?>
 

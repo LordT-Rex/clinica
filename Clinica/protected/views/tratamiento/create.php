@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Tratamiento', 'url'=>array('index')),
-	array('label'=>'Manage Tratamiento', 'url'=>array('admin')),
+	array('label'=>'Listar Tratamiento', 'url'=>array('index')),
+	array('label'=>'Administrar Tratamiento', 'url'=>array('admin')),
 );
 ?>
 

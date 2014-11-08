@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Tratamiento', 'url'=>array('index')),
-	array('label'=>'Create Tratamiento', 'url'=>array('create')),
+	array('label'=>'Listar Tratamiento', 'url'=>array('index')),
+	array('label'=>'Crear Tratamiento', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "

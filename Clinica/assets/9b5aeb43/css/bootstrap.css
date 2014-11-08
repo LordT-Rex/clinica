@@ -101,7 +101,7 @@ sub {
 img {
   width: auto\9;
   height: auto;
-  max-width: 100%;
+  max-width: 70%;
   vertical-align: middle;
   border: 0;
   -ms-interpolation-mode: bicubic;
@@ -3994,6 +3994,7 @@ input[type="submit"].btn.btn-mini {
   padding-right: 15px;
   padding-left: 15px;
   margin-bottom: 0;
+  width: 150px;
   
 }
 
@@ -4417,8 +4418,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .brand {
   display: block;
   float: left;
-  padding: 10px 20px 10px;
-  margin-left: -20px;
+ 
   font-size: 20px;
   font-weight: 200;
   color: #777777;
@@ -4602,7 +4602,7 @@ input[type="submit"].btn.btn-mini {
   display: block;
   float: left;
   margin: 0 10px 0 0;
-  padding-top: 35px;
+  padding-top: 15px;
 }
 
 .navbar .nav.pull-right {

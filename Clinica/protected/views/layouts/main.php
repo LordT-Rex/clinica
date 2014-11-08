@@ -27,11 +27,11 @@
 
 	
 		<?php $this->widget('bootstrap.widgets.TbNavbar', array(
-                       'brandLabel' => '<img src ="' . Yii::app()->request->baseUrl . '/slider/marca_1.jpg" />',
-                        'display' => null, // default is static to top
-                        'items' => array(
+                       'brandLabel' => '<img src ="' . Yii::app()->request->baseUrl . '/slider/marca.jpg" />',
+                        'display' => null, // default is static to top                    
+                        'items' => array(                            
                          array('class' => 'bootstrap.widgets.TbNav',                       
-			'items'=>array(
+			'items'=>array(                                                       
 				array('label'=>'Inicio', 'url'=>array('/site/index')),
 				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about') , 'visible'=>Yii::app()->user->name!='Dentista' & Yii::app()->user->name!='Asistente'),
                                 array('label'=>'Usuarios', 'url'=>array('/Usuario/index'),'visible'=>Yii::app()->user->name=='Dentista'),
@@ -49,8 +49,9 @@
                                 ),),
                                 array('label'=>'Citas', 'url'=>array('/Cita/admin'),'visible'=>Yii::app()->user->name=='Dentista'||Yii::app()->user->name=='Asistente'),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			),
+				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
+                                'label'=>'<img src ="' . Yii::app()->request->baseUrl . '/slider/reservahoraria.png" />','url'=>array('/Cita/solicitud'),
+                            ),
                              ),
                             ),
                  
