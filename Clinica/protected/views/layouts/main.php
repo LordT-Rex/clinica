@@ -23,7 +23,7 @@
 <body>
 
 <div class="container" id="page">
-
+     <div id="menu1">
 
 	
 		<?php $this->widget('bootstrap.widgets.TbNavbar', array(
@@ -55,6 +55,7 @@
                             ),
                  
 		)); ?>
+     </div> 
 	
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
@@ -66,9 +67,6 @@
 
 	<div class="clear"></div>
 
-	<div id="footer">
-		Copyright &copy; <strong>Desarrollado por Jordan Arteaga - Geraldine Bustos</strong><br />
-	</div><!-- footer -->
 
 </div><!-- page -->
 
