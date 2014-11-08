@@ -20,6 +20,9 @@ class Cita extends CActiveRecord {
     public $fin;
     public $paciente;
     public $apellidos;
+    public $direccion;
+    public $telefono;
+    public $ciudad;
 
     /**
      * @return string the associated database table name

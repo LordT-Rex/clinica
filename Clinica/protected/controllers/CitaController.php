@@ -38,7 +38,7 @@ class CitaController extends Controller {
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete'),
+                'actions' => array('admin', 'delete', 'existePaciente'),
                 'users' => array('Dentista', 'Asistente'),
             ),
             array('deny', // deny all users
@@ -68,8 +68,8 @@ class CitaController extends Controller {
             $id_dia = $this->diaSemana($model->fecha);
             $modelBloque = Bloque::model()->findByAttributes(array('id_dia' => $id_dia, 'inicio' => $model->hora));
             $modelBloqueBloqueado = false;
-            if($id_dia != 0){
-                $modelBloqueBloqueado = BloqueNoDisponible::model()->findByAttributes(array('id_bloque'=> $modelBloque->id_bloque , 'fecha' => $model->fecha));
+            if ($id_dia != 0) {
+                $modelBloqueBloqueado = BloqueNoDisponible::model()->findByAttributes(array('id_bloque' => $modelBloque->id_bloque, 'fecha' => $model->fecha));
             }
             $paciente = Paciente::model()->findByPk($model->rut_paciente);
             $modelDiaBloqueado = DiaNoDisponible::model()->findByAttributes(array('id_dia' => $id_dia, 'fecha' => $model->fecha));
@@ -85,21 +85,21 @@ class CitaController extends Controller {
                 if (!$paciente) {
                     $model->addError('rut_paciente', 'El paciente no se encuentra registrado');
                 }
-                if($modelBloqueBloqueado){
+                if ($modelBloqueBloqueado) {
                     $model->addError('hora', 'El bloque seleccionado no se encuentra disponible');
                 }
-                if($modelBloque){
-                    if($modelBloque->estado != "Disponible"){
+                if ($modelBloque) {
+                    if ($modelBloque->estado != "Disponible") {
                         $model->addError('hora', 'El bloque seleccionado no se encuentra disponible');
                     }
                 }
-                if($modelDiaBloqueado){
-                     $model->addError('fecha', 'El día seleccionado no se encuentra disponible');
+                if ($modelDiaBloqueado) {
+                    $model->addError('fecha', 'El día seleccionado no se encuentra disponible');
                 }
-                
+
                 $this->render('create', array('model' => $model));
             }
-        }else{
+        } else {
             $this->render('create', array(
                 'model' => $model,
             ));
@@ -239,6 +239,14 @@ class CitaController extends Controller {
             echo CActiveForm::validate($model);
             Yii::app()->end();
         }
+    }
+
+    public function actionExistePaciente() {
+        if ($_POST['rut_paciente']) {
+            $rut_paciente = $_POST['rut_paciente'];
+            $datos = Yii::app()->db->createCommand("SELECT nombre_paciente , apellidos_paciente , ciudad_paciente , telefono_paciente , direccion_paciente FROM PACIENTE WHERE rut_paciente = " . "'".$rut_paciente."'")->queryAll();
+            echo(($datos) ? json_encode($datos) : '');
+        } 
     }
 
 }
