@@ -13,7 +13,7 @@
         // controller action is handling ajax validation correctly.
         // There is a call to performAjaxValidation() commented in generated controller code.
         // See class documentation of CActiveForm for details on this.
-        'enableAjaxValidation' => true,
+        'enableAjaxValidation' => false,
     ));
     ?>
 
@@ -29,43 +29,41 @@
 
     <div class="row">
         <?php echo $form->labelEx($model, 'paciente'); ?>
-        <?php echo $form->textField($model, 'paciente', array('size' => 20, 'maxlength' => 20, 'id' => 'paciente')); ?>
+        <?php echo $form->textField($model, 'paciente', array('size' => 20, 'maxlength' => 20, 'id' => 'paciente', 'readOnly'=>true)); ?>
         <?php echo $form->error($model, 'paciente'); ?>
     </div>
 
     <div class="row">
         <?php echo $form->labelEx($model, 'apellidos'); ?>
-        <?php echo $form->textField($model, 'apellidos', array('size' => 30, 'maxlength' => 30, 'id' => 'apellidos')); ?>
+        <?php echo $form->textField($model, 'apellidos', array('size' => 30, 'maxlength' => 30, 'id' => 'apellidos','readOnly'=>true)); ?>
         <?php echo $form->error($model, 'apellidos'); ?>
     </div>
 
     <div class="row">
         <?php echo $form->labelEx($model, 'direccion'); ?>
-        <?php echo $form->textField($model, 'direccion', array('size' => 30, 'maxlength' => 30, 'id' => 'direccion')); ?>
+        <?php echo $form->textField($model, 'direccion', array('size' => 30, 'maxlength' => 30, 'id' => 'direccion','readOnly'=>true)); ?>
         <?php echo $form->error($model, 'direccion'); ?>
     </div>
 
     <div class="row">
         <?php echo $form->labelEx($model, 'ciudad'); ?>
-        <?php echo $form->textField($model, 'ciudad', array('size' => 20, 'maxlength' => 20, 'id' => 'ciudad')); ?>
+        <?php echo $form->textField($model, 'ciudad', array('size' => 20, 'maxlength' => 20, 'id' => 'ciudad','readOnly'=>true)); ?>
         <?php echo $form->error($model, 'ciudad'); ?>
     </div>
 
     <div class="row">
         <?php echo $form->labelEx($model, 'telefono'); ?>
-        <?php echo $form->textField($model, 'telefono', array('size' => 20, 'maxlength' => 20, 'id' => 'telefono')); ?>
+        <?php echo $form->textField($model, 'telefono', array('size' => 20, 'maxlength' => 20, 'id' => 'telefono','readOnly'=>true)); ?>
         <?php echo $form->error($model, 'telefono'); ?>
     </div>
 
     <script>
-        $('#rut_paciente').on('blur', function() {
+        $('#rut_paciente').on('keyup', function() {
             $.ajax({
                 url: <?php echo "'".CController::createUrl('cita/ExistePaciente')."'"; ?>,
                 data: {'rut_paciente': $('#rut_paciente').val()},
                 type: "post",
                 success: function(data) {
-                    var x = document.getElementById('rut_paciente');
-                    alert(x.value);
                     var retrievedJSON = data;
                     var array = JSON.parse(retrievedJSON);
                     paciente.value = array[0].nombre_paciente;
@@ -78,7 +76,6 @@
                     direccion.disabled = true;
                     telefono.value = array[0].telefono_paciente;
                     telefono.disabled = true;
-
                 }
             });
         });
