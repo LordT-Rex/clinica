@@ -270,16 +270,4 @@ class CitaController extends Controller {
         echo CJSON::encode($items);
         Yii::app()->end();
     }
-
-    /*public function actionActualizarEstadoCita($id) {
-        $model = TblCita::model()->findByPk($id);
-        if (isset($_POST['TblCita'])) {
-            $model->attributes = $_POST['TblCita'];
-            if ($model->save()) {
-                $this->redirect(array('/site/index'));
-            }
-        }
-        $this->render('actualizarestadocita', array("model" => $model));
-    }*/
-
 }
