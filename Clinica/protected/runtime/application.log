@@ -23733,3 +23733,941 @@ REQUEST_URI=/Nuevo/clinica/Clinica/index.php
 in C:\xampp\htdocs\Nuevo\clinica\Clinica\protected\views\layouts\main.php (53)
 in C:\xampp\htdocs\Nuevo\clinica\Clinica\protected\views\layouts\column1.php (6)
 in C:\xampp\htdocs\Nuevo\clinica\Clinica\protected\controllers\SiteController.php (32)
+2014/11/09 19:39:22 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendarEventsC...')
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendarEv...')
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendarEventsCech&start=2014-11-09&end=2014-11-16&_=1415558362284
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:39:50 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendarEventsC...')
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendarEv...')
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendarEventsCech&start=2014-11-09&end=2014-11-16&_=1415558390652
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:40:13 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendarEventsC...')
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendarEv...')
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendarEventsCech&start=2014-11-09&end=2014-11-16&_=1415558413838
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:40:26 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendarEventsC...')
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendarEv...')
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendarEventsCech&start=2014-11-09&end=2014-11-16&_=1415558426268
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:40:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendarEventsC...')
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendarEv...')
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendarEventsCech&start=2014-11-09&end=2014-11-16&_=1415558439518
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:40:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendarEventsC...')
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendarEv...')
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendarEventsCech&start=2014-11-09&end=2014-11-16&_=1415558441234
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:40:50 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendarEventsC...')
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendarEv...')
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendarEventsCech&start=2014-11-09&end=2014-11-16&_=1415558450162
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:41:29 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendarEventsC...')
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendarEv...')
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendarEventsCech&start=2014-11-09&end=2014-11-16&_=1415558489019
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:41:40 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendarEventsC...')
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendarEv...')
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendarEventsCech&start=2014-11-09&end=2014-11-16&_=1415558500166
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:42:20 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendarEventsC...')
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendarEv...')
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendarEventsCech&start=2014-11-09&end=2014-11-16&_=1415558540089
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:42:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendarEventsC...')
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendarEv...')
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendarEventsCech&start=2014-10-26&end=2014-12-07&_=1415558543303
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:42:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendarEventsC...')
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendarEv...')
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendarEventsCech&start=2014-11-30&end=2015-01-11&_=1415558549972
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:42:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendarEventsC...')
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendarEv...')
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendarEventsCech&start=2014-10-26&end=2014-12-07&_=1415558550935
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:42:31 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendarEventsC...')
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendarEv...')
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendarEventsCech&start=2014-09-28&end=2014-11-09&_=1415558551184
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:42:32 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendarEventsC...')
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendarEv...')
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendarEventsCech&start=2014-10-26&end=2014-12-07&_=1415558552168
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:42:35 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendarEventsC...')
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendarEv...')
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendarEventsCech&start=2014-12-07&end=2014-12-14&_=1415558555454
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:42:35 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendarEventsC...')
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendarEv...')
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendarEventsCech&start=2014-12-14&end=2014-12-21&_=1415558555597
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:42:36 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendarEventsC...')
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendarEv...')
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendarEventsCech&start=2014-12-07&end=2014-12-14&_=1415558556300
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:42:36 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendarEventsC...')
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendarEv...')
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendarEventsCech&start=2014-11-30&end=2014-12-07&_=1415558556464
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:42:36 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendarEventsC...')
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendarEv...')
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendarEventsCech&start=2014-11-23&end=2014-11-30&_=1415558556596
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:42:36 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendarEventsC...')
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendarEv...')
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendarEventsCech&start=2014-11-16&end=2014-11-23&_=1415558556748
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:42:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendarEventsC...')
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendarEv...')
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendarEventsCech&start=2014-11-09&end=2014-11-16&_=1415558568296
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:42:50 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendarEventsC...')
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendarEv...')
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendarEventsCech&start=2014-11-16&end=2014-11-23&_=1415558570860
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:42:51 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendarEventsC...')
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendarEv...')
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendarEventsCech&start=2014-11-23&end=2014-11-30&_=1415558571136
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:42:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendarEventsC...')
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendarEv...')
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendarEventsCech&start=2014-11-16&end=2014-11-23&_=1415558572320
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:43:38 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:270)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-11-09&end=2014-11-16&_=1415558618134
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (270)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:43:41 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:270)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-11-16&end=2014-11-23&_=1415558621284
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (270)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:43:48 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:270)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-11-09&end=2014-11-16&_=1415558628138
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (270)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:43:49 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:270)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-10-26&end=2014-12-07&_=1415558629466
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (270)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:43:51 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:270)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-11-09&end=2014-11-16&_=1415558631057
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (270)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:44:23 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:270)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-11-09&end=2014-11-16&_=1415558663445
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (270)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:44:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "agenda/actualizarEstadoCita"' in C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('agenda/actualiz...')
+#1 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=agenda/actualizarEstadoCita&id=1
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:45:35 [warning] [application] Error al establecer unsafe al atributo "paciente" de "Cita".
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (67)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:45:35 [warning] [application] Error al establecer unsafe al atributo "apellidos" de "Cita".
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (67)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:45:35 [warning] [application] Error al establecer unsafe al atributo "direccion" de "Cita".
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (67)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:45:35 [warning] [application] Error al establecer unsafe al atributo "ciudad" de "Cita".
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (67)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:45:35 [warning] [application] Error al establecer unsafe al atributo "telefono" de "Cita".
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (67)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:45:39 [warning] [application] Error al establecer unsafe al atributo "paciente" de "Cita".
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (67)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:45:39 [warning] [application] Error al establecer unsafe al atributo "apellidos" de "Cita".
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (67)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:45:39 [warning] [application] Error al establecer unsafe al atributo "direccion" de "Cita".
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (67)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:45:39 [warning] [application] Error al establecer unsafe al atributo "ciudad" de "Cita".
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (67)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:45:39 [warning] [application] Error al establecer unsafe al atributo "telefono" de "Cita".
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (67)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:45:56 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:271)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-11-09&end=2014-11-16&_=1415558756767
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (271)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:46:00 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:271)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-11-16&end=2014-11-23&_=1415558760178
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (271)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:46:02 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:271)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-11-09&end=2014-11-16&_=1415558761999
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (271)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:46:15 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:271)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-11-09&end=2014-11-16&_=1415558775329
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (271)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:46:17 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:271)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-11-16&end=2014-11-23&_=1415558776986
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (271)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:46:18 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:271)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-10-26&end=2014-12-07&_=1415558778018
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (271)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:46:19 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:271)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-11-09&end=2014-11-16&_=1415558779074
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (271)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:46:20 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:271)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-10-26&end=2014-12-07&_=1415558780926
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (271)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:46:22 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:271)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-11-30&end=2015-01-11&_=1415558782774
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (271)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:46:23 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:271)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-12-28&end=2015-02-08&_=1415558783214
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (271)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:46:23 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:271)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-11-30&end=2015-01-11&_=1415558783823
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (271)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:46:24 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:271)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-10-26&end=2014-12-07&_=1415558784019
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (271)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:46:24 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:271)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-11-30&end=2015-01-11&_=1415558784901
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (271)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:46:25 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:271)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-10-26&end=2014-12-07&_=1415558785935
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (271)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:46:37 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:270)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-11-09&end=2014-11-16&_=1415558797577
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (270)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:46:39 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:270)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-10-26&end=2014-12-07&_=1415558799483
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (270)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:47:14 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:270)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-11-09&end=2014-11-16&_=1415558834615
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (270)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:51:18 [error] [exception.CException] exception 'CException' with message 'La propiedad "Paciente"."nombre" no se encuentra definida.' in C:\xampp\htdocs\TESIS2\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\db\ar\CActiveRecord.php(145): CComponent->__get('nombre')
+#1 C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php(270): CActiveRecord->__get('nombre')
+#2 C:\xampp\htdocs\TESIS2\framework\web\actions\CInlineAction.php(49): CitaController->actionCalendar()
+#3 C:\xampp\htdocs\TESIS2\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendar')
+#12 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendar')
+#13 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-10-26&end=2014-12-07&_=1415559078871
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:51:20 [error] [exception.CException] exception 'CException' with message 'La propiedad "Paciente"."nombre" no se encuentra definida.' in C:\xampp\htdocs\TESIS2\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\db\ar\CActiveRecord.php(145): CComponent->__get('nombre')
+#1 C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php(270): CActiveRecord->__get('nombre')
+#2 C:\xampp\htdocs\TESIS2\framework\web\actions\CInlineAction.php(49): CitaController->actionCalendar()
+#3 C:\xampp\htdocs\TESIS2\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendar')
+#12 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendar')
+#13 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-11-09&end=2014-11-16&_=1415559080521
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:51:22 [error] [exception.CException] exception 'CException' with message 'La propiedad "Paciente"."nombre" no se encuentra definida.' in C:\xampp\htdocs\TESIS2\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\db\ar\CActiveRecord.php(145): CComponent->__get('nombre')
+#1 C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php(270): CActiveRecord->__get('nombre')
+#2 C:\xampp\htdocs\TESIS2\framework\web\actions\CInlineAction.php(49): CitaController->actionCalendar()
+#3 C:\xampp\htdocs\TESIS2\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('calendar')
+#12 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/calendar')
+#13 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-10-26&end=2014-12-07&_=1415559081992
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:52:17 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:271)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#1 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/calendar&start=2014-11-09&end=2014-11-16&_=1415559137708
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (271)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/09 19:53:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "agenda/actualizarEstadoCita"' in C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('agenda/actualiz...')
+#1 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=agenda/actualizarEstadoCita&id=2
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:54:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "agenda/actualizarEstadoCita"' in C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('agenda/actualiz...')
+#1 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=agenda/actualizarEstadoCita&id=2
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---
+2014/11/09 19:54:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "agenda/actualizarEstadoCita"' in C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('agenda/actualiz...')
+#1 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=agenda/actualizarEstadoCita&id=2
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/agenda
+---

@@ -38,7 +38,7 @@ class CitaController extends Controller {
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete', 'existePaciente'),
+                'actions' => array('admin', 'delete', 'existePaciente','agenda','calendar'),
                 'users' => array('Dentista', 'Asistente'),
             ),
             array('deny', // deny all users
@@ -164,10 +164,6 @@ class CitaController extends Controller {
      */
     public function actionUpdate($id) {
         $model = $this->loadModel($id);
-
-        // Uncomment the following line if AJAX validation is needed
-        // $this->performAjaxValidation($model);
-
         if (isset($_POST['Cita'])) {
             $model->attributes = $_POST['Cita'];
             if ($model->save())
@@ -240,13 +236,50 @@ class CitaController extends Controller {
             Yii::app()->end();
         }
     }
+    
+    public function actionAgenda(){
+        $this->render('agenda');
+    }
 
     public function actionExistePaciente() {
         if ($_POST['rut_paciente']) {
             $rut_paciente = $_POST['rut_paciente'];
-            $datos = Yii::app()->db->createCommand("SELECT nombre_paciente , apellidos_paciente , ciudad_paciente , telefono_paciente , direccion_paciente FROM PACIENTE WHERE rut_paciente = " . "'".$rut_paciente."'")->queryAll();
+            $datos = Yii::app()->db->createCommand("SELECT nombre_paciente , apellidos_paciente , ciudad_paciente , telefono_paciente , direccion_paciente FROM PACIENTE WHERE rut_paciente = " . "'" . $rut_paciente . "'")->queryAll();
             echo(($datos) ? json_encode($datos) : '');
-        } 
+        }
     }
+
+    public function actionCalendar() {
+        $items = array();
+        $color = '#005FFF';
+        $model = Cita::model()->findAllByAttributes(array('estado_cita'=> 'Confirmada'));
+        foreach ($model as $value) {
+            $paciente = Paciente::model()->findByPk($value->rut_paciente);
+            $bloque = Bloque::model()->findByPk($value->id_bloque);
+            $items[] = array(
+                'id' => $value->id_cita,
+                'title' => $paciente->nombre_paciente . " " . $paciente->apellidos_paciente,
+                'start' => $value->fecha . " " . $bloque->inicio,
+                'end' => $value->fecha . " " . $bloque->fin,
+                'color' => $color,
+                'allDay' => false,
+                'editable' => false,
+                'url' => $this->createUrl('cita/update', array('id' => $value->id_cita)),
+            );
+        }
+        echo CJSON::encode($items);
+        Yii::app()->end();
+    }
+
+    /*public function actionActualizarEstadoCita($id) {
+        $model = TblCita::model()->findByPk($id);
+        if (isset($_POST['TblCita'])) {
+            $model->attributes = $_POST['TblCita'];
+            if ($model->save()) {
+                $this->redirect(array('/site/index'));
+            }
+        }
+        $this->render('actualizarestadocita', array("model" => $model));
+    }*/
 
 }

@@ -43,7 +43,8 @@
                                     array('label'=>'Reporte 1','url'=>array('/Atencion/viewReporte'),'visible'=>Yii::app()->user->name=='Dentista'||Yii::app()->user->name=='Asistente'),
                                 ),),    
                                 array('label'=>'Tratamientos', 'url'=>array('/Tratamiento/index'),'visible'=>Yii::app()->user->name=='Dentista'||Yii::app()->user->name=='Asistente'),
-                                array('label'=>'Agenda','items'=> array( 
+                                array('label'=>'Agenda','items'=> array(
+                                    array('label'=>'Agenda','url'=>array('/Cita/agenda'),'visible'=>Yii::app()->user->name=='Dentista'||Yii::app()->user->name=='Asistente'),
                                     array('label'=>'Dia','url'=>array('/Dia/index'),'visible'=>Yii::app()->user->name=='Dentista'||Yii::app()->user->name=='Asistente'),
                                     array('label'=>'Bloque','url'=>array('/Bloque/bloquearPorDia'),'visible'=>Yii::app()->user->name=='Dentista'||Yii::app()->user->name=='Asistente'),
                                 ),),
