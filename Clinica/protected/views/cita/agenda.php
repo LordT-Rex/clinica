@@ -23,6 +23,17 @@
         
         'events'=>$this->createUrl('calendar'),
         'monthNamesShort'=>array('Enero' , 'Febrero' , 'Marzo' , 'Abril' , 'Mayo' , 'Junio' , 'Julio' ,'Agosto' , 'Septiembre' , 'Octubre' , 'Noviembre' , 'Diciembre' ),
+        'monthNames'=>array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" ), 
+        'monthNamesShort'=>array( 'Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiempre','Octubre','Noviembre','Diciembre'),
+        'dayNames'=>array('Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'),
+        'dayNamesShort'=>array('Dom','Lun','Mar','Mie','Jue','Vie','Sab'),
+                'buttonText'=>array(
+                    'today'=> 'hoy',
+               'month'=> 'mes',
+               'week'=> 'semana',
+               'day'=> 'día'),
+               
+        
         //'events'=>$this->createUrl('latihan/training/calendarEvents'), // URL to get event
     )));
 ?>
