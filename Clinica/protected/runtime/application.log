@@ -24700,3 +24700,18 @@ Stack trace:
 #24 {main}
 REQUEST_URI=/TESIS2/Clinica/index.php
 ---
+2014/11/10 15:25:55 [warning] [application] Error al establecer unsafe al atributo "paciente" de "Cita".
+in C:\xampp\htdocs\Nuevo\clinica\Clinica\protected\controllers\CitaController.php (168)
+in C:\xampp\htdocs\Nuevo\clinica\Clinica\index.php (13)
+2014/11/10 15:25:55 [warning] [application] Error al establecer unsafe al atributo "apellidos" de "Cita".
+in C:\xampp\htdocs\Nuevo\clinica\Clinica\protected\controllers\CitaController.php (168)
+in C:\xampp\htdocs\Nuevo\clinica\Clinica\index.php (13)
+2014/11/10 15:25:55 [warning] [application] Error al establecer unsafe al atributo "direccion" de "Cita".
+in C:\xampp\htdocs\Nuevo\clinica\Clinica\protected\controllers\CitaController.php (168)
+in C:\xampp\htdocs\Nuevo\clinica\Clinica\index.php (13)
+2014/11/10 15:25:55 [warning] [application] Error al establecer unsafe al atributo "ciudad" de "Cita".
+in C:\xampp\htdocs\Nuevo\clinica\Clinica\protected\controllers\CitaController.php (168)
+in C:\xampp\htdocs\Nuevo\clinica\Clinica\index.php (13)
+2014/11/10 15:25:55 [warning] [application] Error al establecer unsafe al atributo "telefono" de "Cita".
+in C:\xampp\htdocs\Nuevo\clinica\Clinica\protected\controllers\CitaController.php (168)
+in C:\xampp\htdocs\Nuevo\clinica\Clinica\index.php (13)
