@@ -9,7 +9,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Volver', 'url'=>array('admin')),
+	array('label'=>'Listado de Citas', 'url'=>array('admin')),
+        array('label'=>'Agenda', 'url'=>array('agenda')),
 );
 ?>
 

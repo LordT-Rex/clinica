@@ -9,6 +9,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Crear Cita', 'url'=>array('create')),
+        array('label'=>'Agenda', 'url'=>array('agenda')),
 );
 
 Yii::app()->clientScript->registerScript('search', "

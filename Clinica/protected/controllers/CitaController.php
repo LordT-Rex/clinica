@@ -175,7 +175,6 @@ class CitaController extends Controller {
             if ($model->save())
                 $this->redirect(array('view', 'id' => $model->id_cita));
         }
-
         $this->render('update', array(
             'model' => $model,
         ));

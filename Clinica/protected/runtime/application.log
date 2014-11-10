@@ -24746,3 +24746,31 @@ REQUEST_URI=/Nuevo/clinica/Clinica/index.php
 in C:\xampp\htdocs\Nuevo\clinica\Clinica\protected\extensions\bootstrap\helpers\TbArray.php (47)
 in C:\xampp\htdocs\Nuevo\clinica\Clinica\protected\extensions\bootstrap\widgets\TbNav.php (110)
 in C:\xampp\htdocs\Nuevo\clinica\Clinica\protected\extensions\bootstrap\widgets\TbNav.php (77)
+2014/11/10 16:45:32 [error] [exception.CException] exception 'CException' with message 'La propiedad "EFullCalendarHeart"."height" no se encuentra definida.' in C:\xampp\htdocs\TESIS2\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\CWidgetFactory.php(161): CComponent->__set('height', 650)
+#1 C:\xampp\htdocs\TESIS2\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(CitaController), 'ext.fullcalenda...', Array)
+#2 C:\xampp\htdocs\TESIS2\framework\web\CBaseController.php(172): CBaseController->createWidget('ext.fullcalenda...', Array)
+#3 C:\xampp\htdocs\TESIS2\Clinica\protected\views\cita\agenda.php(45): CBaseController->widget('ext.fullcalenda...', Array)
+#4 C:\xampp\htdocs\TESIS2\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\TESIS2\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#7 C:\xampp\htdocs\TESIS2\framework\web\CController.php(782): CController->renderPartial('agenda', NULL, true)
+#8 C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php(246): CController->render('agenda')
+#9 C:\xampp\htdocs\TESIS2\framework\web\actions\CInlineAction.php(49): CitaController->actionAgenda()
+#10 C:\xampp\htdocs\TESIS2\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('agenda')
+#19 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('Cita/agenda')
+#20 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=Cita/agenda
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php
+---

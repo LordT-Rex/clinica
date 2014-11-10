@@ -1,4 +1,10 @@
 <h1>Agenda</h1>
+
+<?php $this->menu=array(
+	array('label'=>'Crear Cita', 'url'=>array('create')),
+        array('label'=>'Listado de Citas', 'url'=>array('admin')),
+);?>
+
 <?php $this->widget('ext.fullcalendar.EFullCalendarHeart', array(
     //'themeCssFile'=>'cupertino/jquery-ui.min.css',
     'options'=>array(
@@ -9,12 +15,12 @@
             
         ),
         'lang'=>'es',
-        //'slotMinutes'=>45,
-        //'slotDuration'=>45,
+        //'slotMinutes'=>20,
+        //'slotDuration'=>20,
         'snapDuration'=>'00:20:00',
         //'slotMinutes'=> '00:20:00',
-        //'slotDuration'=> '00:20:00',
-        'minTime'=> '09:00:00',
+        'slotDuration'=> '00:20:00',
+        'minTime'=> '10:00:00',
         'maxTime'=>'21:00:00',
         'selectable'=> true,
         'selectHelper'=> true,
