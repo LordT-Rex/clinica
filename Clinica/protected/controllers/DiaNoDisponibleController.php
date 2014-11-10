@@ -35,7 +35,7 @@ class DiaNoDisponibleController extends Controller {
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
                 'actions' => array('admin', 'delete'),
-                'users' => array('Dentista','Asistente'),
+                'users' => array('Dentista', 'Asistente'),
             ),
             array('deny', // deny all users
                 'users' => array('*'),
@@ -57,23 +57,35 @@ class DiaNoDisponibleController extends Controller {
      * Creates a new model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      */
-    
     public function actionCreate() {
         $model = new DiaNoDisponible;
-
-        // Uncomment the following line if AJAX validation is needed
-        // $this->performAjaxValidation($model);
-
         if (isset($_POST['DiaNoDisponible'])) {
             $model->attributes = $_POST['DiaNoDisponible'];
-            $model->id_dia = $this->diaSemana($model->fecha);
-            if ($model->save())
+            if ($model->fecha <= $model->fechaFin) {
+                $inicio = $model->fecha;
+                $fin = $model->fechaFin;
+                while ($inicio <= $fin) {
+                    $modeloBloqueado = new DiaNoDisponible;
+                    $modeloBloqueado->id_dia = $this->diaSemana($inicio);
+                    $modeloBloqueado->fecha = $inicio;
+                    $modeloBloqueado->id2 = "algo";
+                    $modeloBloqueado->fechaFin = "as";
+                    $modeloBloqueado->save();
+                    $inicio = strtotime('+1 day', strtotime($inicio));
+                    $inicio = date('Y-m-j', $inicio);
+                }
                 $this->redirect(array('admin'));
+            } else {
+                $model->addError('fechaFin', 'El día de fin no puede ser menor al día de inicio');
+                $this->render('create', array(
+                    'model' => $model,
+                ));
+            }
+        } else {
+            $this->render('create', array(
+                'model' => $model,
+            ));
         }
-
-        $this->render('create', array(
-            'model' => $model,
-        ));
     }
 
     public function actionUpdate($id) {
@@ -143,7 +155,7 @@ class DiaNoDisponibleController extends Controller {
             throw new CHttpException(404, 'The requested page does not exist.');
         return $model;
     }
-    
+
     public function diaSemana($fecha) {
         $ano = substr($fecha, -10, 4);
         $mes = substr($fecha, -5, 2);

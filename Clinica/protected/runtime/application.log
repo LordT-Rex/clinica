@@ -24817,3 +24817,204 @@ Stack trace:
 REQUEST_URI=/TESIS2/Clinica/index.php?r=Cita/agenda
 HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=Cita/admin
 ---
+2014/11/10 18:12:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\DiaNoDisponibleController.php:157
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\DiaNoDisponibleController.php(116): DiaNoDisponibleController->loadModel('1')
+#1 [internal function]: DiaNoDisponibleController->actionDelete('1')
+#2 C:\xampp\htdocs\TESIS2\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DiaNoDisponibleController), Array)
+#3 C:\xampp\htdocs\TESIS2\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DiaNoDisponibleController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\TESIS2\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1116): CFilterChain->run()
+#7 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#8 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('delete')
+#16 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('diaNoDisponible...')
+#17 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?ajax=dia-no-disponible-grid&id=1&r=diaNoDisponible%2Fdelete
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=diaNoDisponible/admin
+---
+2014/11/10 18:12:34 [error] [exception.CException] exception 'CException' with message 'La propiedad "DiaNoDisponible"."fin" no se encuentra definida.' in C:\xampp\htdocs\TESIS2\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\db\ar\CActiveRecord.php(145): CComponent->__get('fin')
+#1 C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\DiaNoDisponibleController.php(73): CActiveRecord->__get('fin')
+#2 C:\xampp\htdocs\TESIS2\framework\web\actions\CInlineAction.php(49): DiaNoDisponibleController->actionCreate()
+#3 C:\xampp\htdocs\TESIS2\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('diaNoDisponible...')
+#13 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=diaNoDisponible/create
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=diaNoDisponible/create
+---
+2014/11/10 19:26:00 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\TESIS2\framework\web\CController.php:793) (C:\xampp\htdocs\TESIS2\framework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\DiaNoDisponibleController.php(83): DiaNoDisponibleController->redirect()
+#1 C:\xampp\htdocs\TESIS2\framework\web\actions\CInlineAction.php(49): DiaNoDisponibleController->actionCreate()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): DiaNoDisponibleController->runAction()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): DiaNoDisponibleController->filterAccessControl()
+#7 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): DiaNoDisponibleController->runActionWithFilters()
+#10 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): DiaNoDisponibleController->run()
+#11 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=diaNoDisponible/create
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\DiaNoDisponibleController.php (83)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/10 19:27:54 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\TESIS2\framework\web\CController.php:793) (C:\xampp\htdocs\TESIS2\framework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\DiaNoDisponibleController.php(83): DiaNoDisponibleController->redirect()
+#1 C:\xampp\htdocs\TESIS2\framework\web\actions\CInlineAction.php(49): DiaNoDisponibleController->actionCreate()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): DiaNoDisponibleController->runAction()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): DiaNoDisponibleController->filterAccessControl()
+#7 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): DiaNoDisponibleController->runActionWithFilters()
+#10 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): DiaNoDisponibleController->run()
+#11 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=diaNoDisponible/create
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\DiaNoDisponibleController.php (83)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/10 19:28:22 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\TESIS2\framework\web\CController.php:793) (C:\xampp\htdocs\TESIS2\framework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\DiaNoDisponibleController.php(83): DiaNoDisponibleController->redirect()
+#1 C:\xampp\htdocs\TESIS2\framework\web\actions\CInlineAction.php(49): DiaNoDisponibleController->actionCreate()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): DiaNoDisponibleController->runAction()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): DiaNoDisponibleController->filterAccessControl()
+#7 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): DiaNoDisponibleController->runActionWithFilters()
+#10 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): DiaNoDisponibleController->run()
+#11 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=diaNoDisponible/create
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\DiaNoDisponibleController.php (83)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/10 19:28:35 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\TESIS2\framework\web\CController.php:793) (C:\xampp\htdocs\TESIS2\framework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\DiaNoDisponibleController.php(83): DiaNoDisponibleController->redirect()
+#1 C:\xampp\htdocs\TESIS2\framework\web\actions\CInlineAction.php(49): DiaNoDisponibleController->actionCreate()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): DiaNoDisponibleController->runAction()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): DiaNoDisponibleController->filterAccessControl()
+#7 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): DiaNoDisponibleController->runActionWithFilters()
+#10 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): DiaNoDisponibleController->run()
+#11 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=diaNoDisponible/create
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\DiaNoDisponibleController.php (83)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/10 19:37:20 [error] [exception.CException] exception 'CException' with message 'CActiveForm y sus behaviors no tienen un método o closure llamado "dropDownField".' in C:\xampp\htdocs\TESIS2\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\Clinica\protected\views\cita\formActualizar.php(30): CComponent->__call('dropDownField', Array)
+#1 C:\xampp\htdocs\TESIS2\Clinica\protected\views\cita\formActualizar.php(30): CActiveForm->dropDownField(Object(Cita), 'estado_cita', Array)
+#2 C:\xampp\htdocs\TESIS2\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\TESIS2\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\TESIS2\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\TESIS2\Clinica\protected\views\cita\update.php(19): CController->renderPartial('formActualizar', Array)
+#6 C:\xampp\htdocs\TESIS2\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\TESIS2\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\TESIS2\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\TESIS2\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#10 C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php(180): CController->render('update', Array)
+#11 [internal function]: CitaController->actionUpdate('5')
+#12 C:\xampp\htdocs\TESIS2\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(CitaController), Array)
+#13 C:\xampp\htdocs\TESIS2\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(CitaController), Object(ReflectionMethod), Array)
+#14 C:\xampp\htdocs\TESIS2\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('update')
+#23 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/update')
+#24 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/update&id=5
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=cita/admin
+---
+2014/11/10 19:37:27 [error] [exception.CException] exception 'CException' with message 'CActiveForm y sus behaviors no tienen un método o closure llamado "dropDown".' in C:\xampp\htdocs\TESIS2\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\Clinica\protected\views\cita\formActualizar.php(30): CComponent->__call('dropDown', Array)
+#1 C:\xampp\htdocs\TESIS2\Clinica\protected\views\cita\formActualizar.php(30): CActiveForm->dropDown(Object(Cita), 'estado_cita', Array)
+#2 C:\xampp\htdocs\TESIS2\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\TESIS2\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\TESIS2\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\TESIS2\Clinica\protected\views\cita\update.php(19): CController->renderPartial('formActualizar', Array)
+#6 C:\xampp\htdocs\TESIS2\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\TESIS2\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\TESIS2\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\TESIS2\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#10 C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php(180): CController->render('update', Array)
+#11 [internal function]: CitaController->actionUpdate('5')
+#12 C:\xampp\htdocs\TESIS2\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(CitaController), Array)
+#13 C:\xampp\htdocs\TESIS2\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(CitaController), Object(ReflectionMethod), Array)
+#14 C:\xampp\htdocs\TESIS2\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('update')
+#23 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('cita/update')
+#24 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/update&id=5
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=cita/admin
+---
+2014/11/10 19:38:20 [warning] [application] Error al establecer unsafe al atributo "paciente" de "Cita".
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (174)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/10 19:38:20 [warning] [application] Error al establecer unsafe al atributo "apellidos" de "Cita".
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (174)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/10 19:38:20 [warning] [application] Error al establecer unsafe al atributo "direccion" de "Cita".
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (174)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/10 19:38:20 [warning] [application] Error al establecer unsafe al atributo "ciudad" de "Cita".
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (174)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/10 19:38:20 [warning] [application] Error al establecer unsafe al atributo "telefono" de "Cita".
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (174)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)

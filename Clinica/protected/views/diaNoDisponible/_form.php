@@ -45,6 +45,33 @@
             ))?>
 		<?php echo $form->error($model,'fecha'); ?>
 	</div>
+        
+        <div class="row">
+		<?php echo $form->labelEx($model,'fechaFin'); ?>
+		<?php $this->widget('zii.widgets.jui.CJuiDatePicker',array(
+                'attribute'=>"fechaFin",
+                'model'=>$model,
+                'language'=>'es',
+                'value'=>$model->fechaFin,
+                'language' => 'es',
+               
+                    'options'=>array(
+                        'autoSize'=>true,
+                        'buttonImage'=>Yii::app()->baseUrl.'/images/calendar.png',
+                        'buttonImageOnly'=>true,
+                        'dateFormat'=>'yy-mm-dd',
+                        'showButtonPanel'=>true,
+                        'changeMonth'=>true,
+                        'changeYear'=>true,
+                        'minDate'=>'1',
+                        'showOtherMonths'=>true,
+                        'changeMonth' => 'true',
+                        'changeYear' => 'true',
+                        'yearRange'=>'-80',
+                ),
+            ))?>
+		<?php echo $form->error($model,'fecha'); ?>
+	</div>
 
 	<div class="row">
 		<?php //echo $form->labelEx($model,'id_dia'); ?>
