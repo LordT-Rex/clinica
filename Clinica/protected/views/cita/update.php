@@ -9,13 +9,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Cita', 'url'=>array('index')),
-	array('label'=>'Create Cita', 'url'=>array('create')),
-	array('label'=>'View Cita', 'url'=>array('view', 'id'=>$model->id_cita)),
-	array('label'=>'Manage Cita', 'url'=>array('admin')),
+	array('label'=>'Volver', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Cita <?php echo $model->id_cita; ?></h1>
+<h3 align="center">Actualizar Cita </h3>
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php $this->renderPartial('formActualizar', array('model'=>$model)); ?>

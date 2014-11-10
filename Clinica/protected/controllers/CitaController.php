@@ -38,7 +38,7 @@ class CitaController extends Controller {
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete', 'existePaciente','agenda','calendar'),
+                'actions' => array('admin', 'delete', 'existePaciente', 'agenda', 'calendar'),
                 'users' => array('Dentista', 'Asistente'),
             ),
             array('deny', // deny all users
@@ -164,6 +164,12 @@ class CitaController extends Controller {
      */
     public function actionUpdate($id) {
         $model = $this->loadModel($id);
+        $paciente = Paciente::model()->findByPk($model->rut_paciente);
+        $model->paciente = $paciente->nombre_paciente;
+        $model->apellidos = $paciente->apellidos_paciente;
+        $model->direccion = $paciente->direccion_paciente;
+        $model->telefono = $paciente->telefono_paciente;
+        $model->ciudad = $paciente->ciudad_paciente;
         if (isset($_POST['Cita'])) {
             $model->attributes = $_POST['Cita'];
             if ($model->save())
@@ -236,8 +242,8 @@ class CitaController extends Controller {
             Yii::app()->end();
         }
     }
-    
-    public function actionAgenda(){
+
+    public function actionAgenda() {
         $this->render('agenda');
     }
 
@@ -252,7 +258,7 @@ class CitaController extends Controller {
     public function actionCalendar() {
         $items = array();
         $color = '#005FFF';
-        $model = Cita::model()->findAllByAttributes(array('estado_cita'=> 'Confirmada'));
+        $model = Cita::model()->findAllByAttributes(array('estado_cita' => 'Confirmada'));
         foreach ($model as $value) {
             $paciente = Paciente::model()->findByPk($value->rut_paciente);
             $bloque = Bloque::model()->findByPk($value->id_bloque);
@@ -270,4 +276,5 @@ class CitaController extends Controller {
         echo CJSON::encode($items);
         Yii::app()->end();
     }
+
 }
