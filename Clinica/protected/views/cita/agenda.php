@@ -15,11 +15,9 @@
             
         ),
         'lang'=>'es',
-        //'slotMinutes'=>20,
-        //'slotDuration'=>20,
         'snapDuration'=>'00:20:00',
-        //'slotMinutes'=> '00:20:00',
         'slotDuration'=> '00:20:00',
+        'allDaySlot'=>false,
         'minTime'=> '10:00:00',
         'maxTime'=>'21:00:00',
         'selectable'=> true,
