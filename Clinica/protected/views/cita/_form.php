@@ -80,6 +80,30 @@
             });
         });
     </script>
+    
+    <script>
+        $('#rut_paciente').on('blur', function() {
+            $.ajax({
+                url: <?php echo "'".CController::createUrl('cita/ExistePaciente')."'"; ?>,
+                data: {'rut_paciente': $('#rut_paciente').val()},
+                type: "post",
+                success: function(data) {
+                    var retrievedJSON = data;
+                    var array = JSON.parse(retrievedJSON);
+                    paciente.value = array[0].nombre_paciente;
+                    paciente.disabled = true;
+                    apellidos.value = array[0].apellidos_paciente;
+                    apellidos.disabled = true;
+                    ciudad.value = array[0].ciudad_paciente;
+                    ciudad.disabled = true;
+                    direccion.value = array[0].direccion_paciente;
+                    direccion.disabled = true;
+                    telefono.value = array[0].telefono_paciente;
+                    telefono.disabled = true;
+                }
+            });
+        });
+    </script>
 
     <div class="row">
         <?php echo $form->labelEx($model, 'fecha'); ?>
@@ -116,7 +140,7 @@
     </div>
 
     <div class="row buttons">
-        <?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?>
+        <?php echo TbHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?>
     </div>
 
     <?php $this->endWidget(); ?>

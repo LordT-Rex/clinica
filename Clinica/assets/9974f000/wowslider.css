@@ -9,7 +9,7 @@
 	margin:0 auto 50px;
 	z-index:100;
 	border:none;
-	
+	text-align:center; /* reset align=center */
 }
 * html #wowslider-container1{ width:960px }
 #wowslider-container1 ul{

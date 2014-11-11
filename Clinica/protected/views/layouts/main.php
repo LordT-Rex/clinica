@@ -22,12 +22,22 @@
 
 <body>
 
-<div class="container" id="page">
-     <div id="menu1">
+<div id="wrapper" id="page">
+    <div id="header">
+        <?php 
+            if(Yii::app()->user->name!='Dentista' & Yii::app()->user->name!='Asistente'){
+                echo "<div id='marca'>
+            <img src ='slider/marca.jpg' />
+        </div>";
+            }
+        ?>
+        
+        <div id="sesion"></div>
+            <div id="menu1">
 
 	
 		<?php $this->widget('bootstrap.widgets.TbNavbar', array(
-                       'brandLabel' => '<img src ="' . Yii::app()->request->baseUrl . '/slider/marca.jpg" />',
+                       //'brandLabel' => '<img src ="' . Yii::app()->request->baseUrl . '/slider/marca.jpg" />',
                         'display' => null, // default is static to top                    
                         'items' => array(                            
                          array('class' => 'bootstrap.widgets.TbNav',                       
@@ -51,22 +61,27 @@
                                 array('label'=>'Citas', 'url'=>array('/Cita/admin'),'visible'=>Yii::app()->user->name=='Dentista'||Yii::app()->user->name=='Asistente'),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
-                                '<a href="index.php?r=Cita/solicitud"),><img src ="'.Yii::app()->request->baseUrl.'/slider/reservahoraria.png" /></a>',
+                                
                             ),
                              ),
                             ),
                  
 		)); ?>
-     </div> 
+     </div>
+        <?php
+            if(Yii::app()->user->name!='Dentista' & Yii::app()->user->name!='Asistente'){
+                echo '<div id="reservahoraria">
+            <a href="index.php?r=Cita/solicitud"><img src ="slider/reservahoraria.png" width="197" height="59"/></a>
+        </div>';
+            }
+        ?>
+    </div>
 	
-	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('bootstrap.widgets.TbBreadcrumb', array(
-			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs -->
-	<?php endif?>
+
+    
 
 	<?php echo $content; ?>
-
+        <div id="pagina"></div>
 	<div class="clear"></div>
 
 

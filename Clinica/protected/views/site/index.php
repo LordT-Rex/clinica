@@ -3,6 +3,8 @@
 
 $this->pageTitle=Yii::app()->name;
 ?>
+<div id="pagina">
+<div id="slider">
   <?php $image_url = Yii::app()->baseUrl . '/slider/';
         $image_arr[] = array( 'image' => $image_url.'slider1.jpg');
         $image_arr[] = array( 'image' => $image_url.'slider2.jpg');
@@ -26,6 +28,7 @@ $this->pageTitle=Yii::app()->name;
         ));
        
        ?>
+</div>
 <div id="columna1">
 <div id="noticia">
 <div id="foto"><img src="slider/foto.png" width="150" height="150" /></div>
@@ -60,7 +63,8 @@ Conoce donde nos encontramos atendiendo. Haz click en Ver Más </div>
 <div id="vermas"><a href="noticia.html">Ver Más</a></div>
 </div>
 </div>
-<div id="footer"><strong>Lunes a Viernes de 9:30 a 13:00 hrs. 15:30 a 20:00 hrs. / Sábados 9:00 a 13:00 hrs.</strong><br />
-informaciones@clinicadentalelroble.cl - (72) 2 23 25 75 - (72) 2 22 90 31<br />
-Copyright &copy; <strong>Desarrollado por Jordan Arteaga - Geraldine Bustos</strong></div>
+</div>
+<div id="footer"><span class="pie">Lunes a Viernes de 9:30 a 13:00 hrs. 15:30 a 20:00 hrs. / Sábados 9:00 a 13:00 hrs.</strong>
+        informaciones@clinicadentalelroble.cl - (72) 2 23 25 75 - (72) 2 22 90 31</span><br />
+ <span class="creditos"> Copyright &copy; Desarrollado por Jordan Arteaga - Geraldine Bustos</span></div>
 
