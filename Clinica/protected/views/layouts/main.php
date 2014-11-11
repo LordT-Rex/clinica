@@ -82,8 +82,7 @@
 
 	<?php echo $content; ?>
         <div id="pagina"></div>
-	<div class="clear"></div>
-
+	
 
 </div><!-- page -->
 
