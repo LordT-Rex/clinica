@@ -91,6 +91,7 @@
             'language' => 'es',
             'value' => $model->fecha,
             'language' => 'es',
+            'htmlOptions'=>array('readonly'=>"readonly"),
             'options' => array(
                 'autoSize' => true,
                 'buttonImage' => Yii::app()->baseUrl . '/images/calendar.png',
