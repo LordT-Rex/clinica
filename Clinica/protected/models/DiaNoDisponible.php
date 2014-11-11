@@ -14,6 +14,8 @@
 class DiaNoDisponible extends CActiveRecord
 {
         public $nombre;
+        public $fechaFin;
+        public $id2;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -30,7 +32,7 @@ class DiaNoDisponible extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('fecha, id_dia', 'required'),
+			array('fecha, id_dia, fechaFin', 'required'),
 			array('id_dia', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -60,6 +62,7 @@ class DiaNoDisponible extends CActiveRecord
 			'fecha' => 'Fecha',
 			'id_dia' => 'Id Dia',
                         'nombre' => 'Día',
+                        'fechaFin' => 'Hasta',
 		);
 	}
 

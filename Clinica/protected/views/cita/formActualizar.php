@@ -26,6 +26,12 @@
         <?php echo $form->textField($model, 'rut_paciente', array('size' => 20, 'maxlength' => 20, 'id' => 'rut_paciente', 'readOnly'=>true)); ?>
         <?php echo $form->error($model, 'rut_paciente'); ?>
     </div>
+        <?php echo $form->labelEx($model, 'estado_cita'); ?>
+        <?php echo $form->dropDownList($model, 'estado_cita', array('Confirmada'=>'Confirmada','Reservada'=>'Reservada')); ?>
+        <?php echo $form->error($model, 'estado_cita'); ?>
+    <div class="row">
+        
+    </div>
 
     <div class="row">
         <?php echo $form->labelEx($model, 'paciente'); ?>

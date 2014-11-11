@@ -35,7 +35,7 @@ class BloqueNoDisponibleController extends Controller {
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
                 'actions' => array('admin', 'delete'),
-                'users' => array('Dentista','Asistente'),
+                'users' => array('Dentista', 'Asistente'),
             ),
             array('deny', // deny all users
                 'users' => array('*'),
@@ -66,23 +66,31 @@ class BloqueNoDisponibleController extends Controller {
         if (isset($_POST['BloqueNoDisponible'])) {
             $model->attributes = $_POST['BloqueNoDisponible'];
             $id_dia = $this->diaSemana($model->fecha);
-            $bloquesArreglo = Bloque::model()->findAllBySql("select * from bloque where inicio >= "."'".$model->bloqueInicio."' and fin <= "."'".$model->bloqueFin."' and id_dia = $id_dia");
-            $i = 0;
-            for($i ; $i < count($bloquesArreglo) ; $i++){
-                $modelOne = $bloquesArreglo[$i];
-                $modeloBloqueado = new BloqueNoDisponible;
-                $modeloBloqueado->id_bloque = $modelOne->id_bloque;
-                $modeloBloqueado->fecha = $model->fecha;
-                print_r($modeloBloqueado->errors);
-                $modeloBloqueado->bloqueInicio = "algo";
-                $modeloBloqueado->bloqueFin = "algo";
-                $modeloBloqueado->save();
+            if ($model->bloqueFin >= $model->bloqueInicio) {
+                $bloquesArreglo = Bloque::model()->findAllBySql("select * from bloque where inicio >= " . "'" . $model->bloqueInicio . "' and fin <= " . "'" . $model->bloqueFin . "' and id_dia = $id_dia");
+                $i = 0;
+                for ($i; $i < count($bloquesArreglo); $i++) {
+                    $modelOne = $bloquesArreglo[$i];
+                    $modeloBloqueado = new BloqueNoDisponible;
+                    $modeloBloqueado->id_bloque = $modelOne->id_bloque;
+                    $modeloBloqueado->fecha = $model->fecha;
+                    print_r($modeloBloqueado->errors);
+                    $modeloBloqueado->bloqueInicio = "algo";
+                    $modeloBloqueado->bloqueFin = "algo";
+                    $modeloBloqueado->save();
+                }
+                $this->redirect(array('admin'));
+            } else {
+                $model->addError('bloqueFin', 'El bloque de fin no puede ser menor al bloque de inicio');
+                $this->render('create', array(
+                    'model' => $model,
+                ));
             }
-            $this->redirect(array('admin'));
-        }
-        $this->render('create', array(
+        } else {
+            $this->render('create', array(
                 'model' => $model,
-        ));
+            ));
+        }
     }
 
     public function diaSemana($fecha) {
