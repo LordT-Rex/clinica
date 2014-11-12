@@ -51,7 +51,7 @@
                                 array('label'=>'Citas', 'url'=>array('/Cita/admin'),'visible'=>Yii::app()->user->name=='Dentista'||Yii::app()->user->name=='Asistente'),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
-                                '<a href="index.php?r=Cita/solicitud"),><img src ="'.Yii::app()->request->baseUrl.'/slider/reservahoraria.png" /></a>',
+                                '<a href="index.php?r=Cita/solicitud")><img src ="'.Yii::app()->request->baseUrl.'/slider/reservahoraria.png" /></a>',
                             ),
                              ),
                             ),

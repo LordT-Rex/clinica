@@ -275,9 +275,13 @@ class CitaController extends Controller {
 
     public function actionCalendar() {
         $items = array();
-        $color = '#005FFF';
-        $model = Cita::model()->findAllByAttributes(array('estado_cita' => 'Confirmada'));
+        $model = Cita::model()->findAll();
         foreach ($model as $value) {
+            if($value->estado_cita == "Confirmada"){
+                $color = '#005FFF';
+            }else{
+                $color = '#FF0000';
+            }
             $paciente = Paciente::model()->findByPk($value->rut_paciente);
             $bloque = Bloque::model()->findByPk($value->id_bloque);
             $items[] = array(
