@@ -4375,7 +4375,8 @@ input[type="submit"].btn.btn-mini {
   margin-bottom: 20px;
   overflow: visible;
    height: 77px;
-  width: 460px;
+  min-width: 460px;
+  max-width: 974px;
 }
 
 .navbar-inner {

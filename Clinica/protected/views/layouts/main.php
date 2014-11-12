@@ -26,6 +26,7 @@
     <div id="header">
         <?php 
             if(Yii::app()->user->name!='Dentista' & Yii::app()->user->name!='Asistente'){
+          
                 echo "<div id='marca'>
             <img src ='slider/marca.jpg' />
         </div>";
@@ -43,7 +44,7 @@
                          array('class' => 'bootstrap.widgets.TbNav',                       
 			'items'=>array(                                                       
 				array('label'=>'Inicio', 'url'=>array('/site/index') , 'visible'=>Yii::app()->user->name!='Dentista' & Yii::app()->user->name!='Asistente'),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about') , 'visible'=>Yii::app()->user->name!='Dentista' & Yii::app()->user->name!='Asistente'),
+				array('label'=>'Quienes Somos', 'url'=>array('/site/page', 'view'=>'about') , 'visible'=>Yii::app()->user->name!='Dentista' & Yii::app()->user->name!='Asistente'),
                                 array('label'=>'Usuarios', 'url'=>array('/Usuario/index'),'visible'=>Yii::app()->user->name=='Dentista'),
                                 array('label'=>'Foro' , 'url'=>array('/Foro/index'), 'visible'=>Yii::app()->user->name!='Dentista' & Yii::app()->user->name!='Asistente'),
                                 //array('label'=>'Reserva tu hora' , 'url'=>array('/Cita/solicitud'), 'visible'=>Yii::app()->user->name!='Dentista' & Yii::app()->user->name!='Asistente'),
