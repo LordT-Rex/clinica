@@ -7,6 +7,7 @@
 
 <?php $this->widget('ext.fullcalendar.EFullCalendarHeart', array(
     //'themeCssFile'=>'cupertino/jquery-ui.min.css',
+
     'options'=>array(
         'header'=>array(
             'left'=>'prev,next,today',
@@ -24,7 +25,6 @@
         'selectHelper'=> true,
         'editable'=>false,
         'defaultView'=> 'agendaWeek',
-        
         'events'=>$this->createUrl('calendar'),
         'monthNamesShort'=>array('Enero' , 'Febrero' , 'Marzo' , 'Abril' , 'Mayo' , 'Junio' , 'Julio' ,'Agosto' , 'Septiembre' , 'Octubre' , 'Noviembre' , 'Diciembre' ),
         'monthNames'=>array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" ), 

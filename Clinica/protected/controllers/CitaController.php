@@ -1,13 +1,13 @@
 <?php
-
+     
 class CitaController extends Controller {
-
+     
     /**
      * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
      * using two-column layout. See 'protected/views/layouts/column2.php'.
      */
     public $layout = '//layouts/column2';
-
+     
     /**
      * @return array action filters
      */
@@ -17,7 +17,7 @@ class CitaController extends Controller {
             'postOnly + delete', // we only allow deletion via POST request
         );
     }
-
+    
     /**
      * Specifies the access control rules.
      * This method is used by the 'accessControl' filter.
@@ -67,13 +67,14 @@ class CitaController extends Controller {
             $model->attributes = $_POST['Cita'];
             $id_dia = $this->diaSemana($model->fecha);
             $modelBloque = Bloque::model()->findByAttributes(array('id_dia' => $id_dia, 'inicio' => $model->hora));
+            $modelCita = Cita::model()->findByAttributes(array('fecha' => $model->fecha, 'id_bloque' => $modelBloque->id_bloque, 'estado_cita' => 'Confirmada'));
             $modelBloqueBloqueado = false;
             if ($id_dia != 0) {
                 $modelBloqueBloqueado = BloqueNoDisponible::model()->findByAttributes(array('id_bloque' => $modelBloque->id_bloque, 'fecha' => $model->fecha));
             }
             $paciente = Paciente::model()->findByPk($model->rut_paciente);
             $modelDiaBloqueado = DiaNoDisponible::model()->findByAttributes(array('id_dia' => $id_dia, 'fecha' => $model->fecha));
-            if ($paciente && $id_dia != 0 && !$modelDiaBloqueado && $modelBloque->estado == "Disponible" && !$modelBloqueBloqueado) {
+            if ($paciente && $id_dia != 0 && !$modelDiaBloqueado && $modelBloque->estado == "Disponible" && !$modelBloqueBloqueado && !$modelCita) {
                 $model->id_bloque = $modelBloque->id_bloque;
                 $model->estado_cita = "Confirmada";
                 if ($model->save())
@@ -95,6 +96,9 @@ class CitaController extends Controller {
                 }
                 if ($modelDiaBloqueado) {
                     $model->addError('fecha', 'El día seleccionado no se encuentra disponible');
+                }
+                if ($modelCita) {
+                    $model->addError('fecha', 'Ya existe una cita confirmada en este horario y fecha');
                 }
 
                 $this->render('create', array('model' => $model));
@@ -170,14 +174,29 @@ class CitaController extends Controller {
         $model->direccion = $paciente->direccion_paciente;
         $model->telefono = $paciente->telefono_paciente;
         $model->ciudad = $paciente->ciudad_paciente;
+        $modelBloque = Bloque::model()->findByPk($model->id_bloque);
+        $model->hora = $modelBloque->inicio;
         if (isset($_POST['Cita'])) {
             $model->attributes = $_POST['Cita'];
-            if ($model->save())
-                $this->redirect(array('view', 'id' => $model->id_cita));
+            $id_dia = $this->diaSemana($model->fecha);
+            $modelBloque = Bloque::model()->findByAttributes(array('id_dia' => $id_dia, 'inicio' => $model->hora));
+            $model->id_bloque = $modelBloque->id_bloque;
+            $modelCita = Cita::model()->findByAttributes(array('fecha' => $model->fecha, 'id_bloque' => $model->id_bloque, 'estado_cita' => 'Confirmada'));
+            if (!$modelCita || $modelCita->id_cita == $model->id_cita) {
+                if ($model->save())
+                    $this->redirect(array('admin'));
+            }else {
+                echo $model->hora;
+                $model->addError('fecha', 'Ya existe una cita confirmada en este horario y fecha');
+                $this->render('update', array(
+                    'model' => $model,
+                ));
+            }
+        } else {
+            $this->render('update', array(
+                'model' => $model,
+            ));
         }
-        $this->render('update', array(
-            'model' => $model,
-        ));
     }
 
     /**
@@ -256,9 +275,13 @@ class CitaController extends Controller {
 
     public function actionCalendar() {
         $items = array();
-        $color = '#005FFF';
-        $model = Cita::model()->findAllByAttributes(array('estado_cita' => 'Confirmada'));
+        $model = Cita::model()->findAll();
         foreach ($model as $value) {
+            if($value->estado_cita == "Confirmada"){
+                $color = '#005FFF';
+            }else{
+                $color = '#FF0000';
+            }
             $paciente = Paciente::model()->findByPk($value->rut_paciente);
             $bloque = Bloque::model()->findByPk($value->id_bloque);
             $items[] = array(
