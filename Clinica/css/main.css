@@ -29,9 +29,6 @@ body
 {
 	margin-top: 5px;
 	margin-bottom: 5px;
-	
-	
-        
         background-repeat:repeat-x;
 }
 
@@ -69,12 +66,18 @@ body
 
 }
 #wrapper {
-
 	height: 914px;
 	width: 1014px;
 	margin:0px auto;
 	text-align:left;
+}
+
+#social{
+        height:58px;
+	width:1014px;	
+	float:left;
 	
+	text-align: center;
 }
 #reservahoraria {
 	height: 77px;
@@ -173,7 +176,7 @@ body
 	background-color:#5984dd;
 	float:left;
 	padding-top:15px;
-	
+	text-align: center;
 }
 .pie{
     font-family:Arial, Helvetica, sans-serif;
