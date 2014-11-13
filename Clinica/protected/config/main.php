@@ -39,6 +39,18 @@ return array(
         'bootstrap' => array(
             'class' => 'bootstrap.components.TbApi',
         ),
+        'mail' => array(
+                'class' => 'ext.mail.YiiMail',
+                'transportType'=>'smtp',
+                'transportOptions'=>array(
+                        'host'=>'smtp.gmail.com',
+                        'username'=>'clinicadentalelroble.chillan@gmail.com',
+                        'password'=>'clinicadentalelroble',
+                        'encryption'=>'ssl',
+                        'port'=>'465',                       
+                ),
+                'viewPath' => 'application.views.mail',             
+        ),
         'ePdf' => array(
             'class' => 'ext.yii-pdf.EYiiPdf',
             'params' => array(

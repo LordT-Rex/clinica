@@ -1,13 +1,13 @@
 <?php
-     
+
 class CitaController extends Controller {
-     
+
     /**
      * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
      * using two-column layout. See 'protected/views/layouts/column2.php'.
      */
     public $layout = '//layouts/column2';
-     
+
     /**
      * @return array action filters
      */
@@ -17,7 +17,7 @@ class CitaController extends Controller {
             'postOnly + delete', // we only allow deletion via POST request
         );
     }
-    
+
     /**
      * Specifies the access control rules.
      * This method is used by the 'accessControl' filter.
@@ -77,9 +77,20 @@ class CitaController extends Controller {
             if ($paciente && $id_dia != 0 && !$modelDiaBloqueado && $modelBloque->estado == "Disponible" && !$modelBloqueBloqueado && !$modelCita) {
                 $model->id_bloque = $modelBloque->id_bloque;
                 $model->estado_cita = "Confirmada";
-                if ($model->save())
+                if ($model->save()) {
+                    ini_set('max_execution_time', 300); 
+                    $message = new YiiMailMessage;
+                    //this points to the file test.php inside the view path
+                    $message->view = "test";
+                    $message->subject = 'My TestSubject';
+                    $params = array('myMail'=>'Hola');
+                    $message->setBody($params , 'text/html');
+                    $message->addTo('yeye.bustos.2015@gmail.com');
+                    $message->from = 'clinicadentalelroble.chillan@gmail.com';
+                    @Yii::app()->mail->send($message);
                     $this->redirect(array('admin'));
-            }else {
+                }
+            } else {
                 if ($id_dia == 0) {
                     $model->addError('fecha', 'Los días domingo no están disponibles');
                 }
@@ -277,9 +288,9 @@ class CitaController extends Controller {
         $items = array();
         $model = Cita::model()->findAll();
         foreach ($model as $value) {
-            if($value->estado_cita == "Confirmada"){
+            if ($value->estado_cita == "Confirmada") {
                 $color = '#005FFF';
-            }else{
+            } else {
                 $color = '#FF0000';
             }
             $paciente = Paciente::model()->findByPk($value->rut_paciente);
