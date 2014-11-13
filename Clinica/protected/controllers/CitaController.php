@@ -78,16 +78,16 @@ class CitaController extends Controller {
                 $model->id_bloque = $modelBloque->id_bloque;
                 $model->estado_cita = "Confirmada";
                 if ($model->save()) {
-                    ini_set('max_execution_time', 300); 
-                    $message = new YiiMailMessage;
+                    //ini_set('max_execution_time', 300); 
+                    //$message = new YiiMailMessage;
                     //this points to the file test.php inside the view path
-                    $message->view = "test";
+                    /*$message->view = "test";
                     $message->subject = 'My TestSubject';
                     $params = array('myMail'=>'Hola');
                     $message->setBody($params , 'text/html');
                     $message->addTo('yeye.bustos.2015@gmail.com');
                     $message->from = 'clinicadentalelroble.chillan@gmail.com';
-                    @Yii::app()->mail->send($message);
+                    @Yii::app()->mail->send($message);*/
                     $this->redirect(array('admin'));
                 }
             } else {
@@ -137,7 +137,7 @@ class CitaController extends Controller {
             $id_dia = $this->diaSemana($solicitud->fecha);
             $modelDia = Dia::model()->findByPk($id_dia);
             $modelDiaBloqueado = DiaNoDisponible::model()->findByAttributes(array('id_dia' => $id_dia, 'fecha' => $solicitud->fecha));
-            if ($modelDia->estado_dia == "Activo" && !$modelDiaBloqueado && $id_dia != 0) {
+            if ($modelDia->estado_dia == "Activo" && !$modelDiaBloqueado && $id_dia != 0 && $solicitud->fecha !="") {
                 $this->redirect(array('CitaReservada', 'fecha' => $solicitud->fecha));
             } else {
                 if ($id_dia == 0) {

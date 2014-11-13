@@ -62,7 +62,7 @@ class BloqueNoDisponibleController extends Controller {
 
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
-
+        $aux = false;
         if (isset($_POST['BloqueNoDisponible'])) {
             $model->attributes = $_POST['BloqueNoDisponible'];
             $id_dia = $this->diaSemana($model->fecha);
@@ -74,12 +74,21 @@ class BloqueNoDisponibleController extends Controller {
                     $modeloBloqueado = new BloqueNoDisponible;
                     $modeloBloqueado->id_bloque = $modelOne->id_bloque;
                     $modeloBloqueado->fecha = $model->fecha;
-                    print_r($modeloBloqueado->errors);
+                    //print_r($modeloBloqueado->errors);
                     $modeloBloqueado->bloqueInicio = "algo";
                     $modeloBloqueado->bloqueFin = "algo";
-                    $modeloBloqueado->save();
+                    if ($modeloBloqueado->save()) {
+                        $aux = true;
+                    }
                 }
-                $this->redirect(array('admin'));
+                if ($aux) {
+                    $this->redirect(array('admin'));
+                } else {
+                    $model->addError('fecha', 'La fecha no puede ser nula');
+                    $this->render('create', array(
+                        'model' => $model,
+                    ));
+                }
             } else {
                 $model->addError('bloqueFin', 'El bloque de fin no puede ser menor al bloque de inicio');
                 $this->render('create', array(

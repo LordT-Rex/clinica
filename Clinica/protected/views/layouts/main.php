@@ -13,10 +13,10 @@
 	<!--[if lt IE 8]>
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
 	<![endif]-->
-
+        
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
-
+        
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
@@ -26,7 +26,6 @@
     <div id="header">
         <?php 
             if(Yii::app()->user->name!='Dentista' & Yii::app()->user->name!='Asistente'){
-          
                 echo "<div id='marca'>
              <a href='index.php?r=site/index'><img src ='slider/marca.jpg' /></a>
         </div>";
@@ -43,11 +42,11 @@
                         'items' => array(                            
                          array('class' => 'bootstrap.widgets.TbNav',                       
 			'items'=>array(                                                       
-				array('label'=>'Inicio', 'url'=>array('/site/index') , 'visible'=>Yii::app()->user->name!='Dentista' & Yii::app()->user->name!='Asistente'),
+				//array('label'=>'Inicio', 'url'=>array('/site/index') , 'visible'=>Yii::app()->user->name!='Dentista' & Yii::app()->user->name!='Asistente'),
 				array('label'=>'Quienes Somos', 'url'=>array('/site/page', 'view'=>'about') , 'visible'=>Yii::app()->user->name!='Dentista' & Yii::app()->user->name!='Asistente'),
                                 array('label'=>'Nuestros servicios', 'url'=>array('/site/page', 'view'=>'servicios') , 'visible'=>Yii::app()->user->name!='Dentista' & Yii::app()->user->name!='Asistente'),
                                 array('label'=>'Usuarios', 'url'=>array('/Usuario/index'),'visible'=>Yii::app()->user->name=='Dentista'),
-                                array('label'=>'Foro' , 'url'=>array('/Foro/index'), 'visible'=>Yii::app()->user->name!='Dentista' & Yii::app()->user->name!='Asistente'),
+                                //array('label'=>'Foro' , 'url'=>array('/Foro/index'), 'visible'=>Yii::app()->user->name!='Dentista' & Yii::app()->user->name!='Asistente'),
                                 //array('label'=>'Reserva tu hora' , 'url'=>array('/Cita/solicitud'), 'visible'=>Yii::app()->user->name!='Dentista' & Yii::app()->user->name!='Asistente'),
                                 array('label'=>'Foro' , 'url'=>array('/Foro/admin'), 'visible'=>Yii::app()->user->name=='Dentista'),
                                 array('label'=>'Pacientes', 'url'=>array('/Paciente/index'),'visible'=>Yii::app()->user->name=='Dentista'||Yii::app()->user->name=='Asistente'),

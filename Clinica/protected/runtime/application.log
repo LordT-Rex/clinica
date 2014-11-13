@@ -25791,3 +25791,247 @@ in C:\xampp\htdocs\memoria\clinica\Clinica\index.php (13)
 2014/11/13 00:51:06 [warning] [application] Error al establecer unsafe al atributo "telefono" de "Cita".
 in C:\xampp\htdocs\memoria\clinica\Clinica\protected\controllers\CitaController.php (180)
 in C:\xampp\htdocs\memoria\clinica\Clinica\index.php (13)
+2014/11/13 15:30:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Agenda"' in C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('Agenda')
+#1 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=Agenda
+---
+2014/11/13 15:32:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "calendar"' in C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('calendar')
+#1 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=calendar
+---
+2014/11/13 15:32:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "agenda"' in C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('agenda')
+#1 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?r=agenda
+---
+2014/11/13 16:14:51 [error] [php] include(YiiMailMessage.php): failed to open stream: No such file or directory (C:\xampp\htdocs\TESIS2\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php(82): spl_autoload_call()
+#1 C:\xampp\htdocs\TESIS2\framework\web\actions\CInlineAction.php(49): CitaController->actionCreate()
+#2 C:\xampp\htdocs\TESIS2\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#4 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#7 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#10 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#11 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/create
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (82)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/13 18:06:51 [warning] [application] Error al establecer unsafe al atributo "paciente" de "Cita".
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (67)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/13 18:06:51 [warning] [application] Error al establecer unsafe al atributo "apellidos" de "Cita".
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (67)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/13 18:06:51 [warning] [application] Error al establecer unsafe al atributo "direccion" de "Cita".
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (67)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/13 18:06:51 [warning] [application] Error al establecer unsafe al atributo "ciudad" de "Cita".
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (67)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/13 18:06:51 [warning] [application] Error al establecer unsafe al atributo "telefono" de "Cita".
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (67)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/13 18:16:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\BloqueNoDisponibleController.php:173
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\BloqueNoDisponibleController.php(132): BloqueNoDisponibleController->loadModel('43')
+#1 [internal function]: BloqueNoDisponibleController->actionDelete('43')
+#2 C:\xampp\htdocs\TESIS2\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BloqueNoDisponibleController), Array)
+#3 C:\xampp\htdocs\TESIS2\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BloqueNoDisponibleController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\TESIS2\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1116): CFilterChain->run()
+#7 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#8 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('delete')
+#16 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('bloqueNoDisponi...')
+#17 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?ajax=bloque-no-disponible-grid&id=43&r=bloqueNoDisponible%2Fdelete
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=bloqueNoDisponible/admin
+---
+2014/11/13 18:28:05 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:164)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\TESIS2\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#6 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#9 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#10 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/CitaReservada&fecha=2014-12-10
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (164)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/13 18:28:12 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php:164)
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\TESIS2\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CitaController->runAction()
+#3 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CitaController->filterAccessControl()
+#6 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CitaController->runActionWithFilters()
+#9 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CitaController->run()
+#10 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CWebApplication->run()
+REQUEST_URI=/TESIS2/Clinica/index.php?r=cita/CitaReservada&fecha=2014-12-10
+in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\CitaController.php (164)
+in C:\xampp\htdocs\TESIS2\Clinica\index.php (13)
+2014/11/13 18:32:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\DiaNoDisponibleController.php:155
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\DiaNoDisponibleController.php(114): DiaNoDisponibleController->loadModel('10')
+#1 [internal function]: DiaNoDisponibleController->actionDelete('10')
+#2 C:\xampp\htdocs\TESIS2\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DiaNoDisponibleController), Array)
+#3 C:\xampp\htdocs\TESIS2\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DiaNoDisponibleController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\TESIS2\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1116): CFilterChain->run()
+#7 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#8 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('delete')
+#16 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('diaNoDisponible...')
+#17 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?ajax=dia-no-disponible-grid&id=10&r=diaNoDisponible%2Fdelete
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=diaNoDisponible/admin
+---
+2014/11/13 18:32:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\DiaNoDisponibleController.php:155
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\DiaNoDisponibleController.php(114): DiaNoDisponibleController->loadModel('5')
+#1 [internal function]: DiaNoDisponibleController->actionDelete('5')
+#2 C:\xampp\htdocs\TESIS2\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DiaNoDisponibleController), Array)
+#3 C:\xampp\htdocs\TESIS2\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DiaNoDisponibleController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\TESIS2\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1116): CFilterChain->run()
+#7 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#8 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('delete')
+#16 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('diaNoDisponible...')
+#17 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?ajax=dia-no-disponible-grid&id=5&r=diaNoDisponible%2Fdelete
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=diaNoDisponible/admin
+---
+2014/11/13 18:32:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\DiaNoDisponibleController.php:155
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\DiaNoDisponibleController.php(114): DiaNoDisponibleController->loadModel('5')
+#1 [internal function]: DiaNoDisponibleController->actionDelete('5')
+#2 C:\xampp\htdocs\TESIS2\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DiaNoDisponibleController), Array)
+#3 C:\xampp\htdocs\TESIS2\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DiaNoDisponibleController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\TESIS2\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1116): CFilterChain->run()
+#7 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#8 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('delete')
+#16 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('diaNoDisponible...')
+#17 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?ajax=dia-no-disponible-grid&id=5&r=diaNoDisponible%2Fdelete
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=diaNoDisponible/admin
+---
+2014/11/13 18:32:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\DiaNoDisponibleController.php:155
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\DiaNoDisponibleController.php(114): DiaNoDisponibleController->loadModel('5')
+#1 [internal function]: DiaNoDisponibleController->actionDelete('5')
+#2 C:\xampp\htdocs\TESIS2\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DiaNoDisponibleController), Array)
+#3 C:\xampp\htdocs\TESIS2\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DiaNoDisponibleController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\TESIS2\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1116): CFilterChain->run()
+#7 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#8 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('delete')
+#16 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('diaNoDisponible...')
+#17 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?ajax=dia-no-disponible-grid&id=5&r=diaNoDisponible%2Fdelete
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=diaNoDisponible/admin
+---
+2014/11/13 18:32:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\DiaNoDisponibleController.php:155
+Stack trace:
+#0 C:\xampp\htdocs\TESIS2\Clinica\protected\controllers\DiaNoDisponibleController.php(114): DiaNoDisponibleController->loadModel('5')
+#1 [internal function]: DiaNoDisponibleController->actionDelete('5')
+#2 C:\xampp\htdocs\TESIS2\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DiaNoDisponibleController), Array)
+#3 C:\xampp\htdocs\TESIS2\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DiaNoDisponibleController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\TESIS2\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1116): CFilterChain->run()
+#7 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#8 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\TESIS2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\TESIS2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\TESIS2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\TESIS2\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\TESIS2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(282): CController->run('delete')
+#16 C:\xampp\htdocs\TESIS2\framework\web\CWebApplication.php(141): CWebApplication->runController('diaNoDisponible...')
+#17 C:\xampp\htdocs\TESIS2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\TESIS2\Clinica\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/TESIS2/Clinica/index.php?ajax=dia-no-disponible-grid&id=5&r=diaNoDisponible%2Fdelete
+HTTP_REFERER=http://localhost/TESIS2/Clinica/index.php?r=diaNoDisponible/admin
+---

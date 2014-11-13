@@ -41,7 +41,7 @@
 		<?php echo $form->error($model,'fecha'); ?>
 	</div>
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?>
+		<?php echo TbHtml::submitButton($model->isNewRecord ? 'Siguiente' : 'Guardar'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
