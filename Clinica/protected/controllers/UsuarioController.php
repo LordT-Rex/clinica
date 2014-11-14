@@ -65,13 +65,22 @@ class UsuarioController extends Controller {
 
         if (isset($_POST['Usuario'])) {
             $model->attributes = $_POST['Usuario'];
-            if ($model->save())
-                $this->redirect(array('view', 'id' => $model->rut_usuario));
+            $user = Usuario::model()->findByPk($model->rut_usuario);
+            if (!$user) {
+                if ($model->save()) {
+                    $this->redirect(array('view', 'id' => $model->rut_usuario));
+                }
+            } else {
+                $model->addError('rut_usuario', 'El run ya se encuentra registrado');
+                $this->render('create', array(
+                    'model' => $model,
+                ));
+            }
+        } else {
+            $this->render('create', array(
+                'model' => $model,
+            ));
         }
-
-        $this->render('create', array(
-            'model' => $model,
-        ));
     }
 
     /**

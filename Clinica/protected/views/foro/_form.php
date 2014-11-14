@@ -21,25 +21,25 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'rut_consultante'); ?>
-		<?php echo $form->textField($model,'rut_consultante',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->textField($model,'rut_consultante',array('size'=>20,'maxlength'=>20,'readOnly'=>true)); ?>
 		<?php echo $form->error($model,'rut_consultante'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'correo_consultante'); ?>
-		<?php echo $form->textField($model,'correo_consultante',array('size'=>35,'maxlength'=>35)); ?>
+		<?php echo $form->textField($model,'correo_consultante',array('size'=>35,'maxlength'=>35,'readOnly'=>true)); ?>
 		<?php echo $form->error($model,'correo_consultante'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'fecha_consulta'); ?>
-		<?php echo $form->textField($model,'fecha_consulta'); ?>
+		<?php echo $form->textField($model,'fecha_consulta', array('readOnly'=>true)); ?>
 		<?php echo $form->error($model,'fecha_consulta'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'pregunta'); ?>
-		<?php echo $form->textArea($model,'pregunta',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textArea($model,'pregunta',array('rows'=>6, 'cols'=>50,'readOnly'=>true)); ?>
 		<?php echo $form->error($model,'pregunta'); ?>
 	</div>
 

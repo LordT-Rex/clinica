@@ -17,6 +17,11 @@ body
 #pagina{
     background-color: #fff;
 }
+#content
+{
+    padding: 10px;
+    background-color: #fff;
+}
 #marca {
 	height: 106px;
 	width: 354px;
@@ -202,6 +207,9 @@ body
 #sidebar
 {
 	padding: 20px 20px 20px 0;
+        position:absolute;
+		top: 140px;
+		left: 10px;
 }
 
 

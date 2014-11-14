@@ -52,7 +52,7 @@ class Cita extends CActiveRecord {
     public function validatePaciente(){
         $modelPaciente = Paciente::model()->findByPk($this->rut_paciente);
         if(!$modelPaciente){
-            $this->addError('rut_usuario', 'El rut ingresado no corresponde a ningún paciente.');
+            $this->addError('rut_usuario', 'El run ingresado no corresponde a ningún paciente.');
         }            
     }
 
@@ -127,7 +127,13 @@ class Cita extends CActiveRecord {
 
     public function getMenuHorasDisponibles($fecha) {
         $idDia = $this->diaSemana($fecha);
-        return CHtml::listData(Bloque::model()->findAllBySql("select * from bloque,bloque_no_disponible where bloque.id_dia = "."'".$idDia."' and bloque.id_bloque not in (select id_bloque from bloque_no_disponible where fecha = "."'".$fecha."'".") and bloque.id_bloque not in(select id_bloque from cita where fecha = "."'".$fecha."'"." and estado_cita = 'Confirmada')") , "inicio", "inicio");
+        /*return $sql = "select * from bloque,bloque_no_disponible where bloque.id_dia = "."'".$idDia."' 
+            and bloque.id_bloque not in (select id_bloque from bloque_no_disponible where fecha = "."'".$fecha."'".") 
+                and bloque.id_bloque not in(select id_bloque from cita where fecha = "."'".$fecha."'"." and estado_cita = 'Confirmada')";*/
+        return CHtml::listData(Bloque::model()->findAllBySql("select * from bloque,bloque_no_disponible where bloque.id_dia = "."'".$idDia."' 
+            and bloque.id_bloque not in (select id_bloque from bloque_no_disponible where fecha = "."'".$fecha."'".") 
+            and bloque.id_bloque not in(select id_bloque from cita where fecha = "."'".$fecha."'"." and estado_cita = 'Confirmada')") , "inicio", "inicio");
+        //return CHtml::listData(Bloque::model()->findAllBySql("select * from bloque where id_dia = 1") , "inicio", "inicio");
     }
 
     public function diaSemana($fecha) {

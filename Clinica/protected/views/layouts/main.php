@@ -46,7 +46,7 @@
 				array('label'=>'Quienes Somos', 'url'=>array('/site/page', 'view'=>'about') , 'visible'=>Yii::app()->user->name!='Dentista' & Yii::app()->user->name!='Asistente'),
                                 array('label'=>'Nuestros servicios', 'url'=>array('/site/page', 'view'=>'servicios') , 'visible'=>Yii::app()->user->name!='Dentista' & Yii::app()->user->name!='Asistente'),
                                 array('label'=>'Usuarios', 'url'=>array('/Usuario/index'),'visible'=>Yii::app()->user->name=='Dentista'),
-                                //array('label'=>'Foro' , 'url'=>array('/Foro/index'), 'visible'=>Yii::app()->user->name!='Dentista' & Yii::app()->user->name!='Asistente'),
+                                array('label'=>'Foro' , 'url'=>array('/Foro/index'), 'visible'=>Yii::app()->user->name!='Dentista' & Yii::app()->user->name!='Asistente'),
                                 //array('label'=>'Reserva tu hora' , 'url'=>array('/Cita/solicitud'), 'visible'=>Yii::app()->user->name!='Dentista' & Yii::app()->user->name!='Asistente'),
                                 array('label'=>'Foro' , 'url'=>array('/Foro/admin'), 'visible'=>Yii::app()->user->name=='Dentista'),
                                 array('label'=>'Pacientes', 'url'=>array('/Paciente/index'),'visible'=>Yii::app()->user->name=='Dentista'||Yii::app()->user->name=='Asistente'),

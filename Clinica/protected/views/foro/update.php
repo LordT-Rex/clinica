@@ -14,6 +14,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update Foro <?php echo $model->id_foro; ?></h1>
+<h3 align="center">Responder Consulta</h3>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

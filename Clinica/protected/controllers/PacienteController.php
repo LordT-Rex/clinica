@@ -30,7 +30,7 @@ class PacienteController extends Controller {
                 'users' => array('@'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('create', 'update', 'delete','odontograma', 'tratamientoPaciente','creaTratamiento','atenciones'),
+                'actions' => array('create', 'update', 'delete', 'odontograma', 'tratamientoPaciente', 'creaTratamiento', 'atenciones'),
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -72,49 +72,56 @@ class PacienteController extends Controller {
             //Datos a guardar en la Ficha
             $rut = $_POST['Paciente']['rut_paciente'];
             $model->attributes = $_POST['Paciente'];
-            if ($model->save()){
-                //Se guarda el rut en la tabla FichaDental
-                $ficha->rut_paciente = $rut;
-                date_default_timezone_set('Chile/Continental');
-                $ficha->fecha_creacion = date("Y-m-d"); 
-                $ficha->save();
-                //Se terminan de guardar los datos en la FichaDental
-                
-                //Se guardan los datos de anamesis en blanco
-                $anamnesis->id_ficha = $ficha->id_ficha;
-                $anamnesis->alergias = "No se registran datos";
-                $anamnesis->enfermedades = "No se registran datos";
-                $anamnesis->enfermedades_familia = "No se registran datos";
-                $anamnesis->medicamentos = "No se registran datos";
-                $anamnesis->otros = "No se registran datos";
-                $anamnesis->save();
-                
-                $odontograma->id_ficha = $ficha->id_ficha;
-                $odontograma->comentario = "No existen comentarios";
-                $odontograma->save();
-                
-                for($i = 0 ; $i < 52 ; $i++){
-                    
-                    $pieza = new PiezaPaciente();
-                    $pieza->id_odontograma = $odontograma->id_odontograma;
-                    $pieza->id_pieza = $i+1;
-                    $pieza->save();
-                    
-                }
-                
-                $this->redirect(array('view', 'id' => $model->rut_paciente));
-            }    
-        }
+            $paciente = Paciente::model()->findByPk($model->rut_paciente);
+            if (!$paciente) {
+                if ($model->save()) {
+                    //Se guarda el rut en la tabla FichaDental
+                    $ficha->rut_paciente = $rut;
+                    date_default_timezone_set('Chile/Continental');
+                    $ficha->fecha_creacion = date("Y-m-d");
+                    $ficha->save();
+                    //Se terminan de guardar los datos en la FichaDental
+                    //Se guardan los datos de anamesis en blanco
+                    $anamnesis->id_ficha = $ficha->id_ficha;
+                    $anamnesis->alergias = "No se registran datos";
+                    $anamnesis->enfermedades = "No se registran datos";
+                    $anamnesis->enfermedades_familia = "No se registran datos";
+                    $anamnesis->medicamentos = "No se registran datos";
+                    $anamnesis->otros = "No se registran datos";
+                    $anamnesis->save();
 
-        $this->render('create', array(
-            'model' => $model,
-        ));
+                    $odontograma->id_ficha = $ficha->id_ficha;
+                    $odontograma->comentario = "No existen comentarios";
+                    $odontograma->save();
+
+                    for ($i = 0; $i < 52; $i++) {
+
+                        $pieza = new PiezaPaciente();
+                        $pieza->id_odontograma = $odontograma->id_odontograma;
+                        $pieza->id_pieza = $i + 1;
+                        $pieza->save();
+                    }
+
+                    $this->redirect(array('view', 'id' => $model->rut_paciente));
+                }
+            } else {
+                $model->addError('rut_paciente', 'El paciente ya se encuentra registrado');
+                //echo TbHtml::alert(TbHtml::ALERT_COLOR_ERROR, 'El paciente bla bla bla');
+                $this->render('create', array(
+                    'model' => $model,
+                ));
+            }
+        } else {
+            $this->render('create', array(
+                'model' => $model,
+            ));
+        }
     }
-    
-    public function actionAtenciones($id){
+
+    public function actionAtenciones($id) {
         $modelAtencion = new Atencion('search');
-        $this->render('listadoAtenciones',array(
-            'model' =>$this->loadModel($id),
+        $this->render('listadoAtenciones', array(
+            'model' => $this->loadModel($id),
             'modelAtencion' => $modelAtencion,
         ));
     }
@@ -202,34 +209,33 @@ class PacienteController extends Controller {
             Yii::app()->end();
         }
     }
-    
+
     public function actionOdontograma($id) {
         $model = $this->loadModel($id);
-        $this->render('odontograma',array('model'=>$model));
+        $this->render('odontograma', array('model' => $model));
     }
 
     public function actionTratamientoPaciente($id) {
         $modelTratamiento = new TratamientoRealizado('search');
-        if(isset ( $_GET ['TratamientoRealizado'] ))
+        if (isset($_GET ['TratamientoRealizado']))
             $modelTratamiento->attributes = $_GET ['TratamientoRealizado'];
         $this->render('tratamientoPaciente', array(
             'model' => $this->loadModel($id),
             'modelTratamiento' => $modelTratamiento,
         ));
     }
-    
+
     public function actionCreaTratamiento($id) {
         $this->render('creaTratamiento', array(
             'model' => $this->loadModel($id),
         ));
     }
-    
-    /*public function actionMuestraFicha(){
-        $this->render('fichaPaciente');
-    }*/
-    
-    /*public function actionFicha($rut) {
-        $this->render('view', array('localId' => $rut));
-    }*/
 
+    /* public function actionMuestraFicha(){
+      $this->render('fichaPaciente');
+      } */
+
+    /* public function actionFicha($rut) {
+      $this->render('view', array('localId' => $rut));
+      } */
 }

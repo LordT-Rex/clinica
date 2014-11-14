@@ -137,7 +137,7 @@ class CitaController extends Controller {
             $id_dia = $this->diaSemana($solicitud->fecha);
             $modelDia = Dia::model()->findByPk($id_dia);
             $modelDiaBloqueado = DiaNoDisponible::model()->findByAttributes(array('id_dia' => $id_dia, 'fecha' => $solicitud->fecha));
-            if ($modelDia->estado_dia == "Activo" && !$modelDiaBloqueado && $id_dia != 0 && $solicitud->fecha !="") {
+            if ($modelDia->estado_dia == "Activo" && !$modelDiaBloqueado && $id_dia != 0) {
                 $this->redirect(array('CitaReservada', 'fecha' => $solicitud->fecha));
             } else {
                 if ($id_dia == 0) {

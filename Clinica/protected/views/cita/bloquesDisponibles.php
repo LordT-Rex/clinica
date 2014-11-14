@@ -29,7 +29,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'hora'); ?>
+		<?php 
+                       //echo $model->getMenuHorasDisponibles($fecha); 
+                       echo $form->labelEx($model,'hora'); ?>
 		<?php echo $form->dropDownList($model,'hora',$model->getMenuHorasDisponibles($fecha)); ?>
 		<?php echo $form->error($model,'hora'); ?>
 	</div>
