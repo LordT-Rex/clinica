@@ -61,25 +61,32 @@ class DiaNoDisponibleController extends Controller {
         $model = new DiaNoDisponible;
         if (isset($_POST['DiaNoDisponible'])) {
             $model->attributes = $_POST['DiaNoDisponible'];
-            if ($model->fecha <= $model->fechaFin) {
-                $inicio = $model->fecha;
-                $fin = $model->fechaFin;
-                while ($inicio <= $fin) {
-                    $modeloBloqueado = new DiaNoDisponible;
-                    $modeloBloqueado->id_dia = $this->diaSemana($inicio);
-                    $modeloBloqueado->fecha = $inicio;
-                    $modeloBloqueado->id2 = "algo";
-                    $modeloBloqueado->fechaFin = "as";
-                    $modeloBloqueado->save();
-                    $inicio = strtotime('+1 day', strtotime($inicio));
-                    $inicio = date('Y-m-j', $inicio);
+            if ($model->fecha != "" && $model->fechaFin != "") {
+                if ($model->fecha <= $model->fechaFin) {
+                    $inicio = $model->fecha;
+                    $fin = $model->fechaFin;
+                    while ($inicio <= $fin) {
+                        $modeloBloqueado = new DiaNoDisponible;
+                        $modeloBloqueado->id_dia = $this->diaSemana($inicio);
+                        $modeloBloqueado->fecha = $inicio;
+                        $modeloBloqueado->id2 = "algo";
+                        $modeloBloqueado->fechaFin = "as";
+                        $modeloBloqueado->save();
+                        $inicio = strtotime('+1 day', strtotime($inicio));
+                        $inicio = date('Y-m-j', $inicio);
+                    }
+                    $this->redirect(array('admin'));
+                } else {
+                    $model->addError('fechaFin', 'El día de fin no puede ser menor al día de inicio');
+                    $this->render('create', array(
+                        'model' => $model,
+                    ));
                 }
-                $this->redirect(array('admin'));
-            } else {
-                $model->addError('fechaFin', 'El día de fin no puede ser menor al día de inicio');
-                $this->render('create', array(
-                    'model' => $model,
-                ));
+            }else{
+                $model->addError('fecha', 'Los campos son obligatorios');
+                    $this->render('create', array(
+                        'model' => $model,
+                    ));
             }
         } else {
             $this->render('create', array(

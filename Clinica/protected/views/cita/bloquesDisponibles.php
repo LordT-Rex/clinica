@@ -14,6 +14,12 @@
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
 )); ?>
+    
+<?php    
+        $this->menu=array(
+            array('label'=>'Volver', 'url'=>array('solicitud')),
+        );
+?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
@@ -22,6 +28,12 @@
          
             <img src ='slider/st.png' /></a>
         
+        <div class="row">
+		<?php echo $form->labelEx($model,'fecha'); ?>
+		<?php echo $form->textField($model,'fecha',array('readOnly'=>true)); ?>
+		<?php echo $form->error($model,'fecha'); ?>
+	</div>      
+
 	<div class="row">
 		<?php echo $form->labelEx($model,'rut_paciente'); ?>
 		<?php echo $form->textField($model,'rut_paciente',array('size'=>20,'maxlength'=>20)); ?>

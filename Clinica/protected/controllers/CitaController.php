@@ -74,20 +74,20 @@ class CitaController extends Controller {
             }
             $paciente = Paciente::model()->findByPk($model->rut_paciente);
             $modelDiaBloqueado = DiaNoDisponible::model()->findByAttributes(array('id_dia' => $id_dia, 'fecha' => $model->fecha));
-            if ($paciente && $id_dia != 0 && !$modelDiaBloqueado && $modelBloque->estado == "Disponible" && !$modelBloqueBloqueado && !$modelCita) {
+            if ($paciente && $id_dia != 0 && !$modelDiaBloqueado && $modelBloque->estado == "Disponible" && !$modelBloqueBloqueado && !$modelCita && !$model->fecha == "") {
                 $model->id_bloque = $modelBloque->id_bloque;
                 $model->estado_cita = "Confirmada";
                 if ($model->save()) {
                     //ini_set('max_execution_time', 300); 
                     //$message = new YiiMailMessage;
                     //this points to the file test.php inside the view path
-                    /*$message->view = "test";
-                    $message->subject = 'My TestSubject';
-                    $params = array('myMail'=>'Hola');
-                    $message->setBody($params , 'text/html');
-                    $message->addTo('yeye.bustos.2015@gmail.com');
-                    $message->from = 'clinicadentalelroble.chillan@gmail.com';
-                    @Yii::app()->mail->send($message);*/
+                    /* $message->view = "test";
+                      $message->subject = 'My TestSubject';
+                      $params = array('myMail'=>'Hola');
+                      $message->setBody($params , 'text/html');
+                      $message->addTo('yeye.bustos.2015@gmail.com');
+                      $message->from = 'clinicadentalelroble.chillan@gmail.com';
+                      @Yii::app()->mail->send($message); */
                     $this->redirect(array('admin'));
                 }
             } else {
@@ -110,6 +110,9 @@ class CitaController extends Controller {
                 }
                 if ($modelCita) {
                     $model->addError('fecha', 'Ya existe una cita confirmada en este horario y fecha');
+                }
+                if ($model->fecha == "") {
+                    $model->addError('fecha', 'La fecha es obligatoria');
                 }
 
                 $this->render('create', array('model' => $model));
@@ -134,19 +137,24 @@ class CitaController extends Controller {
         $model = new Cita();
         if (isset($_POST['SolicitudCita'])) {
             $solicitud->attributes = $_POST['SolicitudCita'];
-            $id_dia = $this->diaSemana($solicitud->fecha);
-            $modelDia = Dia::model()->findByPk($id_dia);
-            $modelDiaBloqueado = DiaNoDisponible::model()->findByAttributes(array('id_dia' => $id_dia, 'fecha' => $solicitud->fecha));
-            if ($modelDia->estado_dia == "Activo" && !$modelDiaBloqueado && $id_dia != 0) {
-                $this->redirect(array('CitaReservada', 'fecha' => $solicitud->fecha));
-            } else {
-                if ($id_dia == 0) {
-                    $solicitud->addError('fecha', 'Los días domingo no se realizan atenciones');
-                    $this->render('solicitudCita', array('model' => $solicitud));
+            if ($solicitud->fecha != "") {
+                $id_dia = $this->diaSemana($solicitud->fecha);
+                $modelDia = Dia::model()->findByPk($id_dia);
+                $modelDiaBloqueado = DiaNoDisponible::model()->findByAttributes(array('id_dia' => $id_dia, 'fecha' => $solicitud->fecha));
+                if ($modelDia->estado_dia == "Activo" && !$modelDiaBloqueado && $id_dia != 0) {
+                    $this->redirect(array('CitaReservada', 'fecha' => $solicitud->fecha));
                 } else {
-                    $solicitud->addError('fecha', 'La fecha seleccionada no se encuentra disponible para atención');
-                    $this->render('solicitudCita', array('model' => $solicitud));
+                    if ($id_dia == 0) {
+                        $solicitud->addError('fecha', 'Los días domingo no se realizan atenciones');
+                        $this->render('solicitudCita', array('model' => $solicitud));
+                    } else {
+                        $solicitud->addError('fecha', 'La fecha seleccionada no se encuentra disponible para atención');
+                        $this->render('solicitudCita', array('model' => $solicitud));
+                    }
                 }
+            } else {
+                $solicitud->addError('fecha', 'La fecha es obligatoria');
+                $this->render('solicitudCita', array('model' => $solicitud));
             }
         } else {
             $this->render('solicitudCita', array('model' => $solicitud));

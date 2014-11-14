@@ -61,87 +61,97 @@ class AtencionController extends Controller {
         $modelo = new ReporteAtenciones();
         if (isset($_POST['ReporteAtenciones'])) {
             $modelo->attributes = $_POST['ReporteAtenciones'];
-            if ($modelo->fin >= $modelo->inicio) {
-                $connection = Yii::app()->db;
-                $fecha1 = new DateTime($modelo->inicio);
-                $fecha2 = $fecha1->format("d-m-Y");
-                $fecha3 = new DateTime($modelo->fin);
-                $fecha4 = $fecha3->format("d-m-Y");
-                $sql = "SELECT * from ATENCION where ATENCION.fecha >=" . "'" . $modelo->inicio . "'" .
-                        "and ATENCION.fecha <=" . "'" . $modelo->fin . "'";
-                $command = $connection->createCommand($sql);
-                $dataReader = $command->query();
-                $rows = $dataReader->readAll();
-                $mPDF1 = Yii::app()->ePdf->mpdf();
-                $mPDF1->WriteHTML("<div align='center'><img src='slider/marca.jpg'></div>");
-                $mPDF1->WriteHTML("<H3 align='center'>Atenciones entre " . $fecha2 . " y " . $fecha4 . "<H3>");
-                $mPDF1->WriteHTML("<br>");
-                $i = 1;
-                foreach ($rows as $row) {
+            if ($modelo->fin != "" || $modelo->inicio != "") {
+                if ($modelo->fin >= $modelo->inicio) {
+                    $connection = Yii::app()->db;
+                    $fecha1 = new DateTime($modelo->inicio);
+                    $fecha2 = $fecha1->format("d-m-Y");
+                    $fecha3 = new DateTime($modelo->fin);
+                    $fecha4 = $fecha3->format("d-m-Y");
+                    $sql = "SELECT * from ATENCION where ATENCION.fecha >=" . "'" . $modelo->inicio . "'" .
+                            "and ATENCION.fecha <=" . "'" . $modelo->fin . "'";
+                    $command = $connection->createCommand($sql);
+                    $dataReader = $command->query();
+                    $rows = $dataReader->readAll();
+                    $mPDF1 = Yii::app()->ePdf->mpdf();
+                    $mPDF1->WriteHTML("<div align='center'><img src='slider/marca.jpg'></div>");
+                    $mPDF1->WriteHTML("<H3 align='center'>Atenciones entre " . $fecha2 . " y " . $fecha4 . "<H3>");
+                    $mPDF1->WriteHTML("<br>");
+                    $i = 1;
+                    foreach ($rows as $row) {
 
-                    $atenciones += $row['resultado'];
-                    $consulta1 = "SELECT nombre_paciente, apellidos_paciente, paciente.rut_paciente 
+                        $atenciones += $row['resultado'];
+                        $consulta1 = "SELECT nombre_paciente, apellidos_paciente, paciente.rut_paciente 
                     FROM paciente, ficha_dental, atencion 
                     WHERE paciente.rut_paciente = ficha_dental.rut_paciente AND ficha_dental.id_ficha = atencion.id_ficha AND atencion.id_atencion = " . $row['id_atencion'];
-                    $command = $connection->createCommand($consulta1);
-                    $dataReader = $command->query();
-                    $filas = $dataReader->readAll();
-                    foreach ($filas as $fila) {
-                        $mPDF1->WriteHTML("Atención de " . $fila['nombre_paciente'] . $fila['apellidos_paciente'] . "<br><br>");
-                    }
+                        $command = $connection->createCommand($consulta1);
+                        $dataReader = $command->query();
+                        $filas = $dataReader->readAll();
+                        foreach ($filas as $fila) {
+                            $mPDF1->WriteHTML("Atención de " . $fila['nombre_paciente'] . $fila['apellidos_paciente'] . "<br><br>");
+                        }
 
-                    $i++;
-                    $mPDF1->WriteHTML("<table border='1'>");
-                    $mPDF1->WriteHTML("<tr>");
-                    $mPDF1->WriteHTML("<td>RUN: " . $fila['rut_paciente'] . "</td>");
-                    $mPDF1->WriteHTML("<td>Fecha: " . $row['fecha'] . "</td></tr>");
+                        $i++;
+                        $mPDF1->WriteHTML("<table border='1'>");
+                        $mPDF1->WriteHTML("<tr>");
+                        $mPDF1->WriteHTML("<td>RUN: " . $fila['rut_paciente'] . "</td>");
+                        $mPDF1->WriteHTML("<td>Fecha: " . $row['fecha'] . "</td></tr>");
 
-                    $sql2 = "SELECT * from TRATAMIENTO_REALIZADO join TRATAMIENTO on 
+                        $sql2 = "SELECT * from TRATAMIENTO_REALIZADO join TRATAMIENTO on 
                 TRATAMIENTO_REALIZADO.id_tratamiento = TRATAMIENTO.id_tratamiento 
                 where TRATAMIENTO_REALIZADO.id_atencion = " . "'" . $row['id_atencion'] . "'";
 
-                    $command = $connection->createCommand($sql2);
-                    $dataReader = $command->query();
-                    $rows2 = $dataReader->readAll();
+                        $command = $connection->createCommand($sql2);
+                        $dataReader = $command->query();
+                        $rows2 = $dataReader->readAll();
 
-                    foreach ($rows2 as $row2) {
-                        $mPDF1->WriteHTML("<tr>");
-                        //$tratamientos += $row2['nombre'];
-                        //$valor += $row2['valor'];
-                        $mPDF1->WriteHTML("<td>" . $row2['nombre'] . "</td>");
-                        $mPDF1->WriteHTML("<td>$" . $row2['valor'] . "</td>");
-                        $mPDF1->WriteHTML("</tr>");
-                    }
-                    $sql3 = "select sum(valor) from TRATAMIENTO, TRATAMIENTO_REALIZADO, ATENCION where TRATAMIENTO.id_tratamiento = TRATAMIENTO_REALIZADO.id_tratamiento AND 
+                        foreach ($rows2 as $row2) {
+                            $mPDF1->WriteHTML("<tr>");
+                            //$tratamientos += $row2['nombre'];
+                            //$valor += $row2['valor'];
+                            $mPDF1->WriteHTML("<td>" . $row2['nombre'] . "</td>");
+                            $mPDF1->WriteHTML("<td>$" . $row2['valor'] . "</td>");
+                            $mPDF1->WriteHTML("</tr>");
+                        }
+                        $sql3 = "select sum(valor) from TRATAMIENTO, TRATAMIENTO_REALIZADO, ATENCION where TRATAMIENTO.id_tratamiento = TRATAMIENTO_REALIZADO.id_tratamiento AND 
                         TRATAMIENTO_REALIZADO.id_atencion = ATENCION.id_atencion AND ATENCION.id_atencion = " . "'" . $row['id_atencion'] . "'" . "AND ATENCION.fecha >=" . "'" . $modelo->inicio . "'" . "and ATENCION.fecha <=" . "'" . $modelo->fin . "'";
 
-                    $command = $connection->createCommand($sql3);
-                    $dataReader = $command->query();
-                    $rows3 = $dataReader->readAll();
+                        $command = $connection->createCommand($sql3);
+                        $dataReader = $command->query();
+                        $rows3 = $dataReader->readAll();
 
-                    foreach ($rows3 as $row3) {
-                        $mPDF1->WriteHTML("<tr>");
-                        $mPDF1->WriteHTML("<td><strong>Total</strong></td>");
-                        $mPDF1->WriteHTML("<td>$" . $row3['sum(valor)'] . "</td>");
-                        $mPDF1->WriteHTML("</tr>");
+                        foreach ($rows3 as $row3) {
+                            $mPDF1->WriteHTML("<tr>");
+                            $mPDF1->WriteHTML("<td><strong>Total</strong></td>");
+                            $mPDF1->WriteHTML("<td>$" . $row3['sum(valor)'] . "</td>");
+                            $mPDF1->WriteHTML("</tr>");
+                        }
+                        $mPDF1->WriteHTML("</table>");
+                        $mPDF1->WriteHTML("<br>");
                     }
-                    $mPDF1->WriteHTML("</table>");
-                    $mPDF1->WriteHTML("<br>");
-                }
-                $sql4 = "select sum(valor) from TRATAMIENTO, TRATAMIENTO_REALIZADO, ATENCION where 
+                    $sql4 = "select sum(valor) from TRATAMIENTO, TRATAMIENTO_REALIZADO, ATENCION where 
             TRATAMIENTO.id_tratamiento = TRATAMIENTO_REALIZADO.id_tratamiento AND TRATAMIENTO_REALIZADO.id_atencion = ATENCION.id_atencion 
             AND ATENCION.fecha >=" . "'" . $modelo->inicio . "'" .
-                        "and ATENCION.fecha <=" . "'" . $modelo->fin . "'";
-                $command = $connection->createCommand($sql4);
-                $dataReader = $command->query();
-                $rows4 = $dataReader->readAll();
-                foreach ($rows4 as $row4) {
-                    $mPDF1->WriteHTML("<strong>Total $" . $row4['sum(valor)'] . "</strong>");
+                            "and ATENCION.fecha <=" . "'" . $modelo->fin . "'";
+                    $command = $connection->createCommand($sql4);
+                    $dataReader = $command->query();
+                    $rows4 = $dataReader->readAll();
+                    foreach ($rows4 as $row4) {
+                        $mPDF1->WriteHTML("<strong>Total $" . $row4['sum(valor)'] . "</strong>");
+                    }
+                    $mPDF1->Output('Mi archivo', "I");
+                } else {
+                    $modelo->addError('inicio', 'La fecha de inicio no debe ser mayor a la fecha de fin');
+                    $this->render('reporteAtencion', array('model' => $modelo));
                 }
-                $mPDF1->Output('Mi archivo', "I");
-            }else{
-                $modelo->addError('inicio','La fecha de inicio no debe ser mayor a la fecha de fin');
-                $this->render('reporteAtencion', array('model' => $modelo));
+            } else {
+                if ($modelo->inicio == "") {
+                    $modelo->addError('inicio', 'La fecha de inicio puede ser nula');
+                    $this->render('reporteAtencion', array('model' => $modelo));
+                } else {
+                    $modelo->addError('fin', 'La fecha de inicio puede ser nula');
+                    $this->render('reporteAtencion', array('model' => $modelo));
+                }
             }
         } else {
             $this->render('reporteAtencion', array('model' => $modelo));

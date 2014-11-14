@@ -69,6 +69,7 @@
             'language' => 'es',
             'value' => $model->fecha_termino,
             'language' => 'es',
+            'htmlOptions' => array('readonly' => "readonly"),
             'options' => array(
                 'autoSize' => true,
                 'buttonImage' => Yii::app()->baseUrl . '/images/calendar.png',

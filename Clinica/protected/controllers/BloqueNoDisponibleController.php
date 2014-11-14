@@ -90,6 +90,9 @@ class BloqueNoDisponibleController extends Controller {
                     ));
                 }
             } else {
+                if($model->fecha==""){
+                    $model->addError('fecha', 'La fecha no puede ser nula');
+                }
                 $model->addError('bloqueFin', 'El bloque de fin no puede ser menor al bloque de inicio');
                 $this->render('create', array(
                     'model' => $model,
