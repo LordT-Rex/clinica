@@ -94,8 +94,12 @@ class DiaController extends Controller
 		if(isset($_POST['Dia']))
 		{
 			$model->attributes=$_POST['Dia'];
-			if($model->save())
+			if($model->save()){
+                            if($model->estado_dia == 'Inactivo'){
+                                Yii::app()->user->setFlash('dia',"Revise si existen citas agendadas el día que ha bloqueado");
+                            }    
 				$this->redirect(array('index'));
+                        }        
 		}
 
 		$this->render('update',array(

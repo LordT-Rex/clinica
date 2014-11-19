@@ -11,6 +11,8 @@ $this->menu=array(
 	array('label'=>'Bloquear día en específico', 'url'=>array('create')),
 );
 
+
+
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();
@@ -24,6 +26,12 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
+
+<?php if(Yii::app()->user->hasFlash('success')):?>
+    <div class="grabado_ok">
+        <?php echo TbHtml::alert(TbHtml::ALERT_COLOR_ERROR, Yii::app()->user->getFlash('success')); ?>
+    </div>
+<?php endif; ?>
 
 <h3 align="center">Administrar Días No Disponibles</h3>
 

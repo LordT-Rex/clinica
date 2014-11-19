@@ -59,6 +59,7 @@ class DiaNoDisponibleController extends Controller {
      */
     public function actionCreate() {
         $model = new DiaNoDisponible;
+        $existe = false;
         if (isset($_POST['DiaNoDisponible'])) {
             $model->attributes = $_POST['DiaNoDisponible'];
             if ($model->fecha != "" && $model->fechaFin != "") {
@@ -72,21 +73,30 @@ class DiaNoDisponibleController extends Controller {
                         $modeloBloqueado->id2 = "algo";
                         $modeloBloqueado->fechaFin = "as";
                         $modeloBloqueado->save();
+                        $cita = Cita::model()->findByAttributes(array('fecha' => $inicio));
+                        if ($cita) {
+                            $existe = true;
+                        }
                         $inicio = strtotime('+1 day', strtotime($inicio));
                         $inicio = date('Y-m-j', $inicio);
                     }
-                    $this->redirect(array('admin'));
+                    if ($existe) {
+                         Yii::app()->user->setFlash('success',"Existen citas agendadas en el rango de días bloquados, favor reagendar estas");
+                        $this->redirect(array('admin'));
+                    } else {
+                        $this->redirect(array('admin'));
+                    }
                 } else {
                     $model->addError('fechaFin', 'El día de fin no puede ser menor al día de inicio');
                     $this->render('create', array(
                         'model' => $model,
                     ));
                 }
-            }else{
+            } else {
                 $model->addError('fecha', 'Los campos son obligatorios');
-                    $this->render('create', array(
-                        'model' => $model,
-                    ));
+                $this->render('create', array(
+                    'model' => $model,
+                ));
             }
         } else {
             $this->render('create', array(

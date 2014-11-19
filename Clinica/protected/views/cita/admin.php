@@ -26,6 +26,18 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
+<?php if(Yii::app()->user->hasFlash('contact')):?>
+    <div class="grabado_ok">
+        <?php echo TbHtml::alert(TbHtml::ALERT_COLOR_ERROR, Yii::app()->user->getFlash('contact')); ?>
+    </div>
+<?php endif; ?>
+
+<?php if(Yii::app()->user->hasFlash('error')):?>
+    <div class="grabado_ok">
+        <?php echo TbHtml::alert(TbHtml::ALERT_COLOR_ERROR, Yii::app()->user->getFlash('error')); ?>
+    </div>
+<?php endif; ?>
+
 <h3 align="center">Citas</h3>
 
 <div class="search-form" style="display:none">

@@ -70,6 +70,32 @@ body
 	color:#FF0;
 
 }
+#menuUsuarios{
+        float: left;
+        height: 77px;
+        width: 650px;
+}
+#menuUsuarios ul li {
+	
+	list-style:none;
+	margin-top:20px;
+	text-align:center;
+	display:block;
+	
+}
+#menuUsuarios ul li a {
+	padding:0px 15px;
+	text-decoration:none;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#FFF;
+	font-size:15px;		
+	border-right:solid 2px ;
+	border-right-color:#c1f7ff;
+}
+#menuUsuarios ul li a:hover {
+	color:#FF0;
+
+}
 #wrapper {
 	height: 914px;
 	width: 1014px;

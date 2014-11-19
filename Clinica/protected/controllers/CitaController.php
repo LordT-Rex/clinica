@@ -78,16 +78,26 @@ class CitaController extends Controller {
                 $model->id_bloque = $modelBloque->id_bloque;
                 $model->estado_cita = "Confirmada";
                 if ($model->save()) {
-                    //ini_set('max_execution_time', 300); 
+                    ini_set('max_execution_time', 300);
                     //$message = new YiiMailMessage;
                     //this points to the file test.php inside the view path
-                    /* $message->view = "test";
+                      /*$message->view = "test";
                       $message->subject = 'My TestSubject';
                       $params = array('myMail'=>'Hola');
-                      $message->setBody($params , 'text/html');
+                      $message->setBody('Hola Fea');
                       $message->addTo('yeye.bustos.2015@gmail.com');
-                      $message->from = 'clinicadentalelroble.chillan@gmail.com';
-                      @Yii::app()->mail->send($message); */
+                      $message->from = 'joarteag@alumnos.ubiobio.cl';
+                      @Yii::app()->mail->send($message);*/
+                    $mail = new YiiMailer('contact', array('message' => 'Fea', 'name' => 'Nombre', 'description' => 'Algo'));
+                    //$mail->setSmtp('smtp.gmail.com', 465, 'ssl', true, 'clinicadentalelroble.chillan@gmail.com', 'clinicadentalelroble');
+                    $mail->setFrom('joarteag@alumnos.ubiobio.cl', 'Clinica');
+                    $mail->setSubject('Asunto');
+                    $mail->setTo('yeye.bustos.2015@gmail.com');
+                    if ($mail->send()) {
+                        Yii::app()->user->setFlash('contact', 'Thank you for contacting us. We will respond to you as soon as possible.');
+                    } else {
+                        Yii::app()->user->setFlash('error', 'Error while sending email: ' . $mail->getError());
+                    }
                     $this->redirect(array('admin'));
                 }
             } else {

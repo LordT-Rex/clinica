@@ -2,8 +2,7 @@
         <head>
         </head>
         <body>
-            Dear <?php 
-             echo $myMail;
+            Dear Feeeeeea<?php 
              ?>
                 <br>This is a test mail.
         </body>

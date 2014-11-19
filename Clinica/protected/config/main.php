@@ -21,6 +21,9 @@ return array(
         'bootstrap.helpers.TbHtml',
         'bootstrap.helpers.TbArray',
         'bootstrap.behaviors.TbWidget',
+        'bootstrap.components.*',
+        'ext.YiiMailer.*',
+        'ext.mail.*',
         'bootstrap.widgets.*'
     ),
     'modules' => array(
@@ -44,13 +47,14 @@ return array(
                 'transportType'=>'smtp',
                 'transportOptions'=>array(
                         'host'=>'smtp.gmail.com',
-                        'username'=>'clinicadentalelroble.chillan@gmail.com',
-                        'password'=>'clinicadentalelroble',
+                        'username'=>'joarteag@alumnos.ubiobio.cl',
+                        'password'=>'jordan1991',
                         'encryption'=>'ssl',
                         'port'=>'465',                       
                 ),
                 'viewPath' => 'application.views.mail',             
         ),
+        
         'ePdf' => array(
             'class' => 'ext.yii-pdf.EYiiPdf',
             'params' => array(

@@ -12,6 +12,12 @@ $this->menu=array(
 );
 ?>
 
+<?php if(Yii::app()->user->hasFlash('dia')):?>
+    <div class="grabado_ok">
+        <?php echo TbHtml::alert(TbHtml::ALERT_COLOR_ERROR, Yii::app()->user->getFlash('dia')); ?>
+    </div>
+<?php endif; ?>
+
 <h3 align="center">Manejar disponibilidad de días</h3>
 
 <?php $this->widget('zii.widgets.CListView', array(
