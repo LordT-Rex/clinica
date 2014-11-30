@@ -42,18 +42,6 @@ return array(
         'bootstrap' => array(
             'class' => 'bootstrap.components.TbApi',
         ),
-        'mail' => array(
-                'class' => 'ext.mail.YiiMail',
-                'transportType'=>'smtp',
-                'transportOptions'=>array(
-                        'host'=>'smtp.gmail.com',
-                        'username'=>'joarteag@alumnos.ubiobio.cl',
-                        'password'=>'jordan1991',
-                        'encryption'=>'ssl',
-                        'port'=>'465',                       
-                ),
-                'viewPath' => 'application.views.mail',             
-        ),
         
         'ePdf' => array(
             'class' => 'ext.yii-pdf.EYiiPdf',
